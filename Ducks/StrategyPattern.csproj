@@ -42,11 +42,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FlyNope.cs" />
+    <Compile Include="FlyWings.cs" />
+    <Compile Include="IFlyBehaviour.cs" />
+    <Compile Include="IQuackBehaviour.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuackNope.cs" />
+    <Compile Include="QuackNormal.cs" />
+    <Compile Include="QuackSqueak.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

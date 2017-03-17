@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26228.4
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ducks", "Ducks\Ducks.csproj", "{1F52949E-3569-44EC-8C1C-870D5B263694}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StrategyPattern", "Ducks\StrategyPattern.csproj", "{1F52949E-3569-44EC-8C1C-870D5B263694}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
