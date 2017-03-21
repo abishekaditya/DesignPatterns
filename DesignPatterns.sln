@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.26228.4
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StrategyPattern", "Ducks\StrategyPattern.csproj", "{1F52949E-3569-44EC-8C1C-870D5B263694}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObserverPattern", "ObserverPattern\ObserverPattern.csproj", "{678581C4-15DC-4A01-93CD-76ACBD5B7462}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{1F52949E-3569-44EC-8C1C-870D5B263694}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1F52949E-3569-44EC-8C1C-870D5B263694}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1F52949E-3569-44EC-8C1C-870D5B263694}.Release|Any CPU.Build.0 = Release|Any CPU
+		{678581C4-15DC-4A01-93CD-76ACBD5B7462}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{678581C4-15DC-4A01-93CD-76ACBD5B7462}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{678581C4-15DC-4A01-93CD-76ACBD5B7462}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{678581C4-15DC-4A01-93CD-76ACBD5B7462}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
