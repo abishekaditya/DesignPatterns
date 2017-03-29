@@ -2,9 +2,9 @@
 
 namespace SingletonPattern
 {
-    class ChocolateBoiler
+    internal class ChocolateBoiler
     {
-        enum Status
+        private enum Status
         {
             Empty, InProgress, Boiled
         }
@@ -38,33 +38,27 @@ namespace SingletonPattern
 
         public void Fill()
         {
-            if (isEmpty)
-            {
-                Console.WriteLine("Filling...");
-                boiler = Status.InProgress;
-            }
+            if (!IsEmpty) return;
+            Console.WriteLine("Filling...");
+            boiler = Status.InProgress;
         }
 
         public void Drain()
         {
-            if (isBoiled)
-            {
-                Console.WriteLine("Draining...");
-                boiler = Status.Empty;
-            }
+            if (!IsBoiled) return;
+            Console.WriteLine("Draining...");
+            boiler = Status.Empty;
         }
 
         public void Boil()
         {
-            if (!isBoiled && !isEmpty)
-            {
-                Console.WriteLine("Boiling...");
-                boiler = Status.Boiled;
-            }
+            if (IsBoiled || IsEmpty) return;
+            Console.WriteLine("Boiling...");
+            boiler = Status.Boiled;
         }
 
-        private bool isEmpty { get => boiler == Status.Empty; }
-        private bool isBoiled { get => boiler == Status.Boiled; }
+        private bool IsEmpty => (boiler == Status.Empty);
 
+        private bool IsBoiled => (boiler == Status.Boiled);
     }
 }
