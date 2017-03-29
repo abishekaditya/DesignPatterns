@@ -4,21 +4,21 @@ namespace CommandPattern
 {
     public class Light
     {
-        private string name;
+        private readonly string _name;
 
         public Light(string name)
         {
-            this.name = name;
+            this._name = name;
         }
 
         internal void On()
         {
-            Console.WriteLine($"{name} Light On");
+            Console.WriteLine($"{_name} Light On");
         }
 
         internal void Off()
         {
-            Console.WriteLine($"{name} Light Off");
+            Console.WriteLine($"{_name} Light Off");
         }
     }
 }

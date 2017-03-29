@@ -1,21 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DecoratorPattern
+﻿namespace DecoratorPattern
 {
     class HouseBlend : Beverage
     {
         public HouseBlend()
         {
-            description = "House Blend";
+            _description = "House Blend";
         }
 
-        public override string Description => description;
+        public override string Description => _description;
 
-        public override double cost()
+        public override double Cost()
         {
             return 2.49;
         }

@@ -8,7 +8,7 @@ namespace Ducks
 {
     class QuackSqueak : IQuackBehaviour
     {
-        public void quack()
+        public void Quack()
         {
             Console.WriteLine("Squeeeak");
         }

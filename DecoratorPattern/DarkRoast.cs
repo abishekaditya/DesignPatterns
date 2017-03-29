@@ -1,17 +1,15 @@
-﻿using System;
-
-namespace DecoratorPattern
+﻿namespace DecoratorPattern
 {
     internal class DarkRoast : Beverage
     {
         public DarkRoast()
         {
-            description = "Dark Roast";
+            _description = "Dark Roast";
         }
 
-        public override string Description => description;
+        public override string Description => _description;
 
-        public override double cost()
+        public override double Cost()
         {
             return 1.49;
         }

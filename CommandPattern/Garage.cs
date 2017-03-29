@@ -1,28 +1,24 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CommandPattern
 {
-    class Garage
+    internal class Garage
     {
-        private string name;
+        private readonly string _name;
 
         public Garage(string name)
         {
-            this.name = name;
+            this._name = name;
         }
+
         internal void Open()
         {
-            Console.WriteLine($"{name} Garage Opened");
+            Console.WriteLine($"{_name} Garage Opened");
         }
 
         internal void Close()
         {
-            Console.WriteLine($"{name} Garage Closed");
+            Console.WriteLine($"{_name} Garage Closed");
         }
-
     }
 }

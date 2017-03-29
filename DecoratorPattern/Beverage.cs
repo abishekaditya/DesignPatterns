@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DecoratorPattern
+﻿namespace DecoratorPattern
 {
     abstract class Beverage
     {
-        protected string description = "No Description";
+        protected string _description = "No Description";
         public abstract string Description { get; }
-        public abstract double cost();
+        public abstract double Cost();
     }
 }

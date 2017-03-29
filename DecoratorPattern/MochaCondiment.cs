@@ -1,34 +1,28 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DecoratorPattern
+﻿namespace DecoratorPattern
 {
     class MochaCondiment : CondimentDecorator
     {
-        Beverage beverage;
+        Beverage _beverage;
 
         public MochaCondiment(Beverage beverage)
         {
-            this.beverage = beverage;
+            this._beverage = beverage;
         }
 
         public override string Description {
            get
             {
-                if (beverage.Description.StartsWith("Mocha")){
-                    return "Double " + beverage.Description;
+                if (_beverage.Description.StartsWith("Mocha")){
+                    return "Double " + _beverage.Description;
                 }
                 else
-                    return "Mocha " + beverage.Description;
+                    return "Mocha " + _beverage.Description;
             }
         }
 
-        public override double cost()
+        public override double Cost()
         {
-            return 0.2 + beverage.cost();
+            return 0.2 + _beverage.Cost();
         }
     }
 }

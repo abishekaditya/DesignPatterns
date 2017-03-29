@@ -1,28 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CommandPattern
+﻿namespace CommandPattern
 {
-    class LightOnCommand : Command
+    internal class LightOnCommand : ICommand
     {
-        Light light;
+        private readonly Light _light;
 
         public LightOnCommand(Light l)
         {
-            light = l;
+            _light = l;
         }
 
         public void Execute()
         {
-            light.On();
+            _light.On();
         }
 
         public void Undo()
         {
-            light.Off();
+            _light.Off();
         }
     }
 }

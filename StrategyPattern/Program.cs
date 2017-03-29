@@ -1,6 +1,6 @@
 ﻿namespace Ducks
 {
-    class Duck
+    internal class Duck
     {
         private IQuackBehaviour _quacker;
         private IFlyBehaviour _flyer;
@@ -22,19 +22,18 @@
         }
 
 
-
-        public void PerformQuack()
+        protected void PerformQuack()
         {
-            _quacker.quack();
+            _quacker.Quack();
         }
 
-        public void PerformFly()
+        protected void PerformFly()
         {
-            _flyer.fly();
+            _flyer.Fly();
         }
     }
 
-    class MallardDuck : Duck
+    internal class MallardDuck : Duck
     {
         public MallardDuck()
         {
@@ -49,12 +48,11 @@
         }
     }
 
-    class Program
+    internal static class Program
     {
-        static void Main(string[] args)
+        private static void Main()
         {
-            var mallard = new MallardDuck();
-            mallard.Quacker = new QuackNormal();
+            var mallard = new MallardDuck {Quacker = new QuackNormal()};
             mallard.Display();
             mallard.Flyer = new FlyWings();
             mallard.Display();

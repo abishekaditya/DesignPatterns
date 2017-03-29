@@ -1,34 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CommandPattern
+﻿namespace CommandPattern
 {
-    class MacroCommand : Command
+    internal class MacroCommand : ICommand
     {
-        Command[] commands;
+        private readonly ICommand[] _commands;
 
-        public MacroCommand(Command[] commands)
+        public MacroCommand(ICommand[] commands)
         {
-            this.commands = commands;
+            _commands = commands;
         }
 
         public void Execute()
         {
-            foreach (var item in commands)
-            {
+            foreach (var item in _commands)
                 item.Execute();
-            }
         }
 
         public void Undo()
         {
-            foreach (var item in commands)
-            {
+            foreach (var item in _commands)
                 item.Undo();
-            }
         }
     }
 }

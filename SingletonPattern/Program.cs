@@ -1,21 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SingletonPattern
 {
-    class Program
+    static class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             try
             {
-                var ChocoEggs = ChocolateBoiler.GetInstance();
-                ChocoEggs.Fill();
-                ChocoEggs.Boil();
-                ChocoEggs.Drain();  
+                var chocoEggs = ChocolateBoiler.GetInstance();
+                chocoEggs.Fill();
+                chocoEggs.Boil();
+                chocoEggs.Drain();  
             }
             catch (Exception)
             {

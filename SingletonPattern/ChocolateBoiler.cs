@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SingletonPattern
 {
@@ -10,11 +6,11 @@ namespace SingletonPattern
     {
         enum Status
         {
-            Empty, Filled, InProgress, Boiled
+            Empty, InProgress, Boiled
         }
 
         private static volatile ChocolateBoiler Singleton;
-        static object Lock = new object();
+        static readonly object Lock = new object();
         private Status boiler;
 
         private ChocolateBoiler()
@@ -67,8 +63,8 @@ namespace SingletonPattern
             }
         }
 
-        public bool isEmpty { get => boiler == Status.Empty; }
-        public bool isBoiled { get => boiler == Status.Boiled; }
+        private bool isEmpty { get => boiler == Status.Empty; }
+        private bool isBoiled { get => boiler == Status.Boiled; }
 
     }
 }

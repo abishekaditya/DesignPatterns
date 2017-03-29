@@ -1,16 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CommandPattern
+﻿namespace CommandPattern
 {
-    class RemoteControl
+    internal class RemoteControl
     {
-        Command[] OnCommand;
-        Command[] OffCommand;
-        Command UndoCommand;
+        private readonly ICommand[] _offCommand;
+        private readonly ICommand[] _onCommand;
+        private ICommand _undoCommand;
+
+        public RemoteControl(int slots)
+        {
+            _onCommand = new ICommand[slots];
+            _offCommand = new ICommand[slots];
+
+            var none = new NoCommand();
+            _undoCommand = none;
+            for (var i = 0; i < slots; i++)
+            {
+                _onCommand[i] = none;
+                _offCommand[i] = none;
+            }
+        }
 
 
         public OnOffStruct this[int i]
@@ -18,48 +26,33 @@ namespace CommandPattern
             get
             {
                 OnOffStruct struc;
-                struc.On = OnCommand[i];
-                struc.Off = OffCommand[i];
+                struc.On = _onCommand[i];
+                struc.Off = _offCommand[i];
                 return struc;
             }
 
             set
-            { 
-                OnCommand[i] = value.On;
-                OffCommand[i] = value.Off;
-            }
-        }
-
-        public RemoteControl(int slots)
-        {
-            OnCommand = new Command[slots];
-            OffCommand = new Command[slots];
-
-            var none = new NoCommand();
-            UndoCommand = none;
-            for (int i = 0; i < slots; i++)
             {
-                OnCommand[i] = none;
-                OffCommand[i] = none;
+                _onCommand[i] = value.On;
+                _offCommand[i] = value.Off;
             }
-
         }
 
         public void PushOn(int slot)
         {
-            OnCommand[slot].Execute();
-            UndoCommand = OffCommand[slot];
+            _onCommand[slot].Execute();
+            _undoCommand = _offCommand[slot];
         }
 
         public void PushOff(int slot)
         {
-            OffCommand[slot].Execute();
-            UndoCommand = OnCommand[slot];
+            _offCommand[slot].Execute();
+            _undoCommand = _onCommand[slot];
         }
 
         public void PushUndo()
         {
-            UndoCommand.Execute();
+            _undoCommand.Execute();
         }
     }
 }

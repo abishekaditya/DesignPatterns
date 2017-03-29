@@ -1,27 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CommandPattern
+﻿namespace CommandPattern
 {
-    class GarageDoorCloseCommand : Command
+    internal class GarageDoorCloseCommand : ICommand
     {
-        Garage garage;
+        private readonly Garage _garage;
 
         public GarageDoorCloseCommand(Garage g)
         {
-            garage = g;
+            _garage = g;
         }
+
         public void Execute()
         {
-            garage.Close();
+            _garage.Close();
         }
 
         public void Undo()
         {
-            garage.Open();
+            _garage.Open();
         }
     }
 }

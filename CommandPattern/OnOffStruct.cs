@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CommandPattern
+﻿namespace CommandPattern
 {
-    struct OnOffStruct
+    internal struct OnOffStruct
     {
-        public Command On;
-        public Command Off;
+        public ICommand On;
+        public ICommand Off;
     }
 }

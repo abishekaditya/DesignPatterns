@@ -1,21 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DecoratorPattern
+﻿namespace DecoratorPattern
 {
     class Espresso : Beverage
     {
         public Espresso()
         {
-            description = "Espresso";
+            _description = "Espresso";
         }
 
-        public override string Description => description;
+        public override string Description => _description;
 
-        public override double cost()
+        public override double Cost()
         {
             return 1.99;
         }

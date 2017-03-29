@@ -1,14 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CommandPattern
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main()
         {
             var remote = new RemoteControl(3);
 
@@ -21,11 +17,13 @@ namespace CommandPattern
             var carDoorClose = new GarageDoorCloseCommand(car);
             var carDoorOpen = new GarageDoorOpenCommand(car);
 
-            var garage_button = new OnOffStruct();
-            garage_button.On = bikeDoorOpen;
-            garage_button.Off = bikeDoorClose;
+            var garageButton = new OnOffStruct
+            {
+                On = bikeDoorOpen,
+                Off = bikeDoorClose
+            };
 
-            remote[0] = garage_button;
+            remote[0] = garageButton;
             remote.PushOn(0);
             remote.PushUndo();
             remote.PushUndo();
@@ -35,18 +33,19 @@ namespace CommandPattern
             Console.WriteLine();
             var light = new Light("Hall");
 
-            Command[] partyOn = { new LightOffCommand(light) , bikeDoorOpen , carDoorOpen };
-            Command[] partyOff = { new LightOnCommand(light), bikeDoorClose, carDoorClose };
+            ICommand[] partyOn = {new LightOffCommand(light), bikeDoorOpen, carDoorOpen};
+            ICommand[] partyOff = {new LightOnCommand(light), bikeDoorClose, carDoorClose};
 
 
-            remote[2] = new OnOffStruct { On = new MacroCommand(partyOn), Off = new MacroCommand(partyOff) };
+            remote[2] = new OnOffStruct {On = new MacroCommand(partyOn), Off = new MacroCommand(partyOff)};
 
             try
             {
                 remote.PushOn(2);
                 Console.WriteLine();
                 remote.PushOff(2);
-            } catch (Exception)
+            }
+            catch (Exception)
             {
                 Console.WriteLine("Oops");
             }

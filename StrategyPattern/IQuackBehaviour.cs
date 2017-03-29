@@ -2,6 +2,6 @@
 {
     internal interface IQuackBehaviour
     {
-        void quack();
+        void Quack();
     }
 }

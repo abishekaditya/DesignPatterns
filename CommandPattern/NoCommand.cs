@@ -2,12 +2,8 @@
 
 namespace CommandPattern
 {
-    internal class NoCommand : Command
+    internal class NoCommand : ICommand
     {
-        public NoCommand()
-        {
-        }
-
         public void Execute()
         {
             Console.WriteLine("No Command Assigned");

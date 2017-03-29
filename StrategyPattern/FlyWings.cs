@@ -8,7 +8,7 @@ namespace Ducks
 {
     class FlyWings : IFlyBehaviour
     {
-        public void fly()
+        public void Fly()
         {
             Console.WriteLine("Flap Flap");
         }

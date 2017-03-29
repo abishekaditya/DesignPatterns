@@ -1,36 +1,30 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DecoratorPattern
+﻿namespace DecoratorPattern
 {
     class WhipCondiment : CondimentDecorator
     {
-        Beverage beverage;
+        Beverage _beverage;
 
         public WhipCondiment(Beverage beverage)
         {
-            this.beverage = beverage;
+            this._beverage = beverage;
         }
 
         public override string Description
         {
             get
             { 
-                if (beverage.Description.StartsWith("Whip"))
+                if (_beverage.Description.StartsWith("Whip"))
                 {
-                    return "Double " + beverage.Description;
+                    return "Double " + _beverage.Description;
                 }
                 else
-                    return "Whip " + beverage.Description;
+                    return "Whip " + _beverage.Description;
             }
         }
 
-        public override double cost()
+        public override double Cost()
         {
-            return 0.15 + beverage.cost();
+            return 0.15 + _beverage.Cost();
         }
     }
 }
