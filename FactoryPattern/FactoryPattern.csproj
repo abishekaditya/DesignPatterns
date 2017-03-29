@@ -42,6 +42,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstract Factory\IIngredientsFactory.cs" />
+    <Compile Include="Abstract Factory\Ingredients\Intefaces\ICheese.cs" />
+    <Compile Include="Abstract Factory\Ingredients\Intefaces\IClam.cs" />
+    <Compile Include="Abstract Factory\Ingredients\Intefaces\IDough.cs" />
+    <Compile Include="Abstract Factory\Ingredients\Intefaces\ISauce.cs" />
+    <Compile Include="Abstract Factory\Ingredients\Intefaces\IVeggies.cs" />
     <Compile Include="Abstract Factory\Ingredients\Pepper.cs" />
     <Compile Include="Abstract Factory\Ingredients\CherryTomato.cs" />
     <Compile Include="Abstract Factory\Ingredients\FrozenClam.cs" />
@@ -54,16 +60,10 @@
     <Compile Include="Abstract Factory\Ingredients\DeepDish.cs" />
     <Compile Include="Abstract Factory\Ingredients\FreshClam.cs" />
     <Compile Include="Abstract Factory\Ingredients\Parmesan.cs" />
-    <Compile Include="Abstract Factory\Ingredients\Intefaces\Cheese.cs" />
-    <Compile Include="Abstract Factory\Ingredients\Intefaces\Clam.cs" />
-    <Compile Include="Abstract Factory\Ingredients\Intefaces\Sauce.cs" />
-    <Compile Include="Abstract Factory\Ingredients\Intefaces\Veggies.cs" />
-    <Compile Include="Abstract Factory\Ingredients\Intefaces\Dough.cs" />
     <Compile Include="Pizza\CheesePizza.cs" />
     <Compile Include="Abstract Factory\ChicagoIngredientsFactory.cs" />
     <Compile Include="Factory Method\ChicagoPizzaFactory.cs" />
     <Compile Include="Pizza\ClamPizza.cs" />
-    <Compile Include="Abstract Factory\IngredientsFactory.cs" />
     <Compile Include="Abstract Factory\NYIngredientsFactory.cs" />
     <Compile Include="Factory Method\NYPizzaFactory.cs" />
     <Compile Include="Pizza\Pizza.cs" />

@@ -1,6 +1,6 @@
 ﻿namespace FactoryPattern
 {
-    internal class Cucumber : Veggies
+    internal class Cucumber : IVeggies
     {
         public string Name => "Cucumber";
     }

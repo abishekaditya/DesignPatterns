@@ -1,6 +1,6 @@
 ﻿namespace FactoryPattern
 {
-    public interface Sauce
+    public interface IClam
     {
         string Name { get; }
     }

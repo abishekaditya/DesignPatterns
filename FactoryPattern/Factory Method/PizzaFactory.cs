@@ -4,8 +4,7 @@
     {
         public Pizza Order(string type)
         {
-            Pizza pizza;
-            pizza = Create(type);
+            var pizza = Create(type);
             pizza.Prepare();
             pizza.Bake();
             pizza.Cut();
@@ -13,6 +12,6 @@
             return pizza;
         }
 
-       public abstract Pizza Create(string type);
+        protected abstract Pizza Create(string type);
     }
 }

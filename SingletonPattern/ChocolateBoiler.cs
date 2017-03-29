@@ -2,31 +2,27 @@
 
 namespace SingletonPattern
 {
-    internal class ChocolateBoiler
+    internal partial class ChocolateBoiler
     {
-        private enum Status
-        {
-            Empty, InProgress, Boiled
-        }
 
-        private static volatile ChocolateBoiler Singleton;
-        static readonly object Lock = new object();
-        private Status boiler;
+        private static volatile ChocolateBoiler _singleton;
+        private static readonly object Lock = new object();
+        private Status _boiler;
 
         private ChocolateBoiler()
         {
             Console.WriteLine("Starting");
-            boiler = Status.Empty;
+            _boiler = Status.Empty;
         }
 
         public static ChocolateBoiler GetInstance()
         {
             lock (Lock)
             {
-                if (Singleton == null)
+                if (_singleton == null)
                 {
-                    Singleton = new ChocolateBoiler();
-                    return Singleton;
+                    _singleton = new ChocolateBoiler();
+                    return _singleton;
                 }
                 else
                 {
@@ -40,25 +36,25 @@ namespace SingletonPattern
         {
             if (!IsEmpty) return;
             Console.WriteLine("Filling...");
-            boiler = Status.InProgress;
+            _boiler = Status.InProgress;
         }
 
         public void Drain()
         {
             if (!IsBoiled) return;
             Console.WriteLine("Draining...");
-            boiler = Status.Empty;
+            _boiler = Status.Empty;
         }
 
         public void Boil()
         {
             if (IsBoiled || IsEmpty) return;
             Console.WriteLine("Boiling...");
-            boiler = Status.Boiled;
+            _boiler = Status.Boiled;
         }
 
-        private bool IsEmpty => (boiler == Status.Empty);
+        private bool IsEmpty => (_boiler == Status.Empty);
 
-        private bool IsBoiled => (boiler == Status.Boiled);
+        private bool IsBoiled => (_boiler == Status.Boiled);
     }
 }

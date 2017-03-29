@@ -9,7 +9,7 @@
         public IQuackBehaviour Quacker {
             set
             {
-                this._quacker = value;
+                _quacker = value;
             }
         }
 
@@ -17,7 +17,7 @@
         {
             set
             {
-                this._flyer = value;
+                _flyer = value;
             }
         }
 
@@ -43,8 +43,8 @@
 
         public void Display()
         {
-            this.PerformFly();
-            this.PerformQuack();
+            PerformFly();
+            PerformQuack();
         }
     }
 

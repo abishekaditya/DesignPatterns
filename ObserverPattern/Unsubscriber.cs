@@ -1,20 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ObserverPattern
 {
-    internal class Unsubscriber<Weather> : IDisposable
+    internal class Unsubscriber<TWeather> : IDisposable
     {
-        private List<IObserver<Weather>> _observers;
-        private IObserver<Weather> _observer;
+        private readonly List<IObserver<TWeather>> _observers;
+        private readonly IObserver<TWeather> _observer;
 
-        internal Unsubscriber(List<IObserver<Weather>> observers, IObserver<Weather> observer)
+        internal Unsubscriber(List<IObserver<TWeather>> observers, IObserver<TWeather> observer)
         {
-            this._observers = observers;
-            this._observer = observer;
+            _observers = observers;
+            _observer = observer;
         }
 
         public void Dispose()

@@ -1,6 +1,6 @@
 ﻿namespace FactoryPattern
 {
-    internal class Onion : Veggies
+    internal class Onion : IVeggies
     {
         public Onion()
         {

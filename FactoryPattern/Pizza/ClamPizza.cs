@@ -4,17 +4,17 @@ namespace FactoryPattern
 {
     class ClamPizza : Pizza
     {
-        IngredientsFactory ingredients;
+        readonly IIngredientsFactory _ingredients;
 
-        public ClamPizza(IngredientsFactory ing)
+        public ClamPizza(IIngredientsFactory ing)
         {
-            ingredients = ing;
+            _ingredients = ing;
         }
 
         internal override void Prepare()
         {
             Console.WriteLine("Preparing " + Name + " Using");
-            Console.Write("Dough: " + ingredients.CreateDough().Name + ", Clam: " + ingredients.CreateClam().Name + ", Sauce: " + ingredients.CreateSauce().Name + ", Cheese: " + ingredients.CreateCheese().Name);
+            Console.Write("Dough: " + _ingredients.CreateDough().Name + ", Clam: " + _ingredients.CreateClam().Name + ", Sauce: " + _ingredients.CreateSauce().Name + ", Cheese: " + _ingredients.CreateCheese().Name);
             Console.WriteLine();
 
         }

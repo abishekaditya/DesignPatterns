@@ -1,30 +1,32 @@
-﻿namespace FactoryPattern
+﻿using System.Collections.Generic;
+
+namespace FactoryPattern
 {
-    internal class NYIngredientsFactory : IngredientsFactory
+    internal class NyIngredientsFactory : IIngredientsFactory
     {
-        Cheese IngredientsFactory.CreateCheese()
+        ICheese IIngredientsFactory.CreateCheese()
         {
             return new Mozarella();
         }
 
-        Clam IngredientsFactory.CreateClam()
+        IClam IIngredientsFactory.CreateClam()
         {
             return new FrozenClam();
         }
 
-        Dough IngredientsFactory.CreateDough()
+        IDough IIngredientsFactory.CreateDough()
         {
             return new ThinCrust();
         }
 
-        Sauce IngredientsFactory.CreateSauce()
+        ISauce IIngredientsFactory.CreateSauce()
         {
             return new CherryTomato();
         }
 
-        Veggies[] IngredientsFactory.CreateVeggies()
+        IEnumerable<IVeggies> IIngredientsFactory.CreateVeggies()
         {
-            Veggies[] arr = { new Onion(), new Pepper(), new Olive() };
+            IVeggies[] arr = { new Onion(), new Pepper(), new Olive() };
             return arr;
         }
     }

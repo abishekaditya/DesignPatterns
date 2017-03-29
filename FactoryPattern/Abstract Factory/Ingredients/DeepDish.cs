@@ -1,6 +1,6 @@
 ﻿namespace FactoryPattern
 {
-    internal class DeepDish : Dough
+    internal class DeepDish : IDough
     {
         public string Name => "Deep Dish";
     }

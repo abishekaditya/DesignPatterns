@@ -1,28 +1,25 @@
 ﻿namespace FactoryPattern
 {
-    class NYPizzaFactory : PizzaFactory
+    class NyPizzaFactory : PizzaFactory
     {
-        public override Pizza Create(string type)
+        protected override Pizza Create(string type)
         {
             Pizza pizza;
-            IngredientsFactory ingredients = new NYIngredientsFactory();
+            IIngredientsFactory ingredients = new NyIngredientsFactory();
 
             if (type.Equals("Cheese"))
             {
-                pizza = new CheesePizza(ingredients);
-                pizza.Name = "NY Style Cheese";
+                pizza = new CheesePizza(ingredients) {Name = "NY Style Cheese"};
             }
             else if (type.Equals("Clam"))
             {
-                pizza = new ClamPizza(ingredients);
-                pizza.Name = "NY Style Clam";
+                pizza = new ClamPizza(ingredients) {Name = "NY Style Clam"};
             }
             else
             {
-                pizza = new VeggiePizza(ingredients);
-                pizza.Name = "NY Style Veggie";
+                pizza = new VeggiePizza(ingredients) {Name = "NY Style Veggie"};
             }
-            pizza.color = "blue";
+            pizza.Color = "blue";
             return pizza;
         }
     }

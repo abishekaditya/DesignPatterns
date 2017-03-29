@@ -2,10 +2,10 @@
 {
     class ChicagoPizzaFactory : PizzaFactory
     {
-        public override Pizza Create(string type)
+        protected override Pizza Create(string type)
         {
             Pizza pizza;
-            IngredientsFactory ingredients = new ChicagoIngredientsFactory();
+            IIngredientsFactory ingredients = new ChicagoIngredientsFactory();
            
             if (type.Equals("Cheese"))
             {
@@ -22,7 +22,7 @@
                 pizza = new VeggiePizza(ingredients);
                 pizza.Name = "Chicago Veggie";
             }
-            pizza.color = "red";
+            pizza.Color = "red";
             return pizza;
         }
     }

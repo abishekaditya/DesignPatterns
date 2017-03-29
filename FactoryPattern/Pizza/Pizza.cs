@@ -1,15 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FactoryPattern
 {
     abstract class Pizza
     {
-        string name;
-        public string color;
+        public string Color;
 
         internal abstract void Prepare();
         internal void Bake()
@@ -22,14 +17,10 @@ namespace FactoryPattern
         }
         internal void Box()
         {
-            Console.WriteLine("Putting pizza in " + color + " coloured box");
+            Console.WriteLine("Putting pizza in " + Color + " coloured box");
         }
-         
-        public string Name
-        {
-            get => name;
-            set => name = value;
-        }
+
+        public string Name { protected get; set; }
 
     }
 }

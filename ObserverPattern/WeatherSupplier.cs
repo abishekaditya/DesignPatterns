@@ -1,39 +1,41 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ObserverPattern
 {
     class WeatherSupplier : IObservable<Weather>
     {
-        private List<IObserver<Weather>> observers;
-        private List<Weather> screens;
+        private readonly List<IObserver<Weather>> _observers;
+        private List<Weather> Screens { get; }
+
+        private List<Weather> GetScreens()
+        {
+            return Screens;
+        }
 
         public WeatherSupplier()
         {
-            observers = new List<IObserver<Weather>>();
-            screens = new List<Weather>();
+            _observers = new List<IObserver<Weather>>();
+            Screens = new List<Weather>();
         }
 
         public IDisposable Subscribe(IObserver<Weather> observer)
         {
-            if (!observers.Contains(observer))
+            if (!_observers.Contains(observer))
             {
-                observers.Add(observer);
-                foreach (var item in screens)
+                _observers.Add(observer);
+                foreach (var item in GetScreens())
                 {
                     observer.OnNext(item);
                 }
             }
-            return new Unsubscriber<Weather>(observers, observer);
+            return new Unsubscriber<Weather>(_observers, observer);
         }
 
         public void WeatherConditions(double temp = 0, double humd = 0, double pres = 0)
         {
             var conditions = new Weather(humd, pres, temp);
-            foreach (var item in observers)
+            foreach (var item in _observers)
                 item.OnNext(conditions);
         }
     }

@@ -1,6 +1,6 @@
 ﻿namespace FactoryPattern
 {
-    internal class PlumTomato : Sauce
+    internal class PlumTomato : ISauce
     {
         public string Name => "Plum Tomato";
     }

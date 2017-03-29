@@ -1,6 +1,6 @@
 ﻿namespace FactoryPattern
 {
-    public interface Veggies
+    public interface ISauce
     {
         string Name { get; }
     }

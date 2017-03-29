@@ -1,6 +1,6 @@
 ﻿namespace FactoryPattern
 {
-    internal class Mozarella : Cheese
+    internal class Mozarella : ICheese
     {
         public string Name => "Mozarella";
     }

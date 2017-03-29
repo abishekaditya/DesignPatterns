@@ -4,10 +4,10 @@ namespace FactoryPattern
 {
     static class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             Console.WriteLine("Yankees fan orders:");
-            var yankees = new NYPizzaFactory();
+            var yankees = new NyPizzaFactory();
             yankees.Order("Cheese");
             Console.WriteLine();
             Console.WriteLine("Cubs fan orders:");

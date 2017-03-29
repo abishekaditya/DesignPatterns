@@ -1,6 +1,6 @@
 ﻿namespace FactoryPattern
 {
-    public interface Clam
+    public interface ICheese
     {
         string Name { get; }
     }

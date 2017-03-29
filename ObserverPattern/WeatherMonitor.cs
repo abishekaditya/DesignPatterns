@@ -1,29 +1,25 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ObserverPattern
 {
-    class WeatherMonitor : IObserver<Weather>
+    sealed class WeatherMonitor : IObserver<Weather>
     {
-        private IDisposable cancellation;
-        private string name;
+        private IDisposable _cancellation;
+        private readonly string _name;
 
         public void Subscribe(WeatherSupplier provider)
         {
-            cancellation = provider.Subscribe(this);
+            _cancellation = provider.Subscribe(this);
         }
 
-        public virtual void Unsubscribe()
+        public void Unsubscribe()
         {
-            cancellation.Dispose();
+            _cancellation.Dispose();
         }
 
         public WeatherMonitor(string name)
         {
-            this.name = name;
+            _name = name;
         }
         
         public void OnCompleted()
@@ -38,26 +34,26 @@ namespace ObserverPattern
 
         public void OnNext(Weather value)
         {
-            Console.WriteLine(this.name);
-            if (name.Contains("T"))
+            Console.WriteLine(_name);
+            if (_name.Contains("T"))
             {
                 string op = $"| Temperature : {value.Temperature} Celsius |";
                 Console.Write(op);
                 
             }
-            if (name.Contains("P"))
+            if (_name.Contains("P"))
             {
                 string op = $"| Pressure : {value.Pressure} atm |";
                 Console.Write(op);
             }
-            if (name.Contains("H"))
+            if (_name.Contains("H"))
             {
                 string op = $"| Humidity : {value.Humidity*100} % |";
                 Console.Write(op);
             }
-            if (!(name.Contains("T") || name.Contains("P") || name.Contains("H")))
+            if (!(_name.Contains("T") || _name.Contains("P") || _name.Contains("H")))
             {
-                this.OnError(new Exception());
+                OnError(new Exception());
             }
             Console.WriteLine();
         }
