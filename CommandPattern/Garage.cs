@@ -8,7 +8,7 @@ namespace CommandPattern
 
         public Garage(string name)
         {
-            this._name = name;
+            _name = name;
         }
 
         internal void Open()

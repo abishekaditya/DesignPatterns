@@ -23,14 +23,6 @@
 
         public OnOffStruct this[int i]
         {
-            get
-            {
-                OnOffStruct struc;
-                struc.On = _onCommand[i];
-                struc.Off = _offCommand[i];
-                return struc;
-            }
-
             set
             {
                 _onCommand[i] = value.On;
