@@ -7,7 +7,7 @@ namespace IteratorPattern
     {
         private const int Max = 1;
 
-        private int _count = 0;
+        private int _count;
         private Menu[] _items;
 
         public IEnumerable Items
