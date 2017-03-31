@@ -6,15 +6,13 @@ namespace StatePattern
     {
         public static void Main()
         {
-            //LegacyTest();
+            LegacyTest();
             Console.WriteLine();
             var gumballmachine = new GumballMachine(5);
             gumballmachine.InsertQuarter();
             gumballmachine.TurnCrank();
             gumballmachine.InsertQuarter();
             gumballmachine.TurnCrank();
-
-
         }
 
         private static void LegacyTest()
@@ -25,9 +23,6 @@ namespace StatePattern
             machine.InsertQuarter();
             machine.EjectQuarter();
             machine.InsertQuarter();
-            machine.TurnCrank();
-            machine.InsertQuarter();
-            machine.EjectQuarter();
         }
     }
 }

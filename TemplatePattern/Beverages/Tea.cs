@@ -1,5 +1,4 @@
 ﻿using System;
-using System.ComponentModel;
 
 namespace TemplatePattern
 {
@@ -16,12 +15,12 @@ namespace TemplatePattern
             Sugar();
         }
 
-        private void Sugar()
+        private new void Sugar()
         {
             Console.WriteLine($"adding {_sugar} spoons of sugar");
         }
 
-        public override int AddSugar
+        public new int AddSugar
         {
             set { _sugar = value; }
         }

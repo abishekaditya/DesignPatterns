@@ -4,6 +4,7 @@ namespace TemplatePattern
 {
     public abstract class Beverage
     {
+        // ReSharper disable once InconsistentNaming
         protected int _sugar;
         public void Prepare()
         {
@@ -32,7 +33,7 @@ namespace TemplatePattern
 
         protected abstract void AddCondiments();
 
-        public virtual int AddSugar { get; set; }
+        public int AddSugar { get; set; }
 
         protected void Sugar() { }
     }
