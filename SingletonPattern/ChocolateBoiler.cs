@@ -4,32 +4,16 @@ namespace SingletonPattern
 {
     internal partial class ChocolateBoiler
     {
-
-        private static volatile ChocolateBoiler _singleton;
-        private static readonly object Lock = new object();
+        private static readonly Lazy<ChocolateBoiler> _singleton = new Lazy<ChocolateBoiler>(() => new ChocolateBoiler());
+        
+        public static ChocolateBoiler GetInstance() => _singleton.Value;
+      
         private Status _boiler;
 
         private ChocolateBoiler()
         {
             Console.WriteLine("Starting");
             _boiler = Status.Empty;
-        }
-
-        public static ChocolateBoiler GetInstance()
-        {
-            lock (Lock)
-            {
-                if (_singleton == null)
-                {
-                    _singleton = new ChocolateBoiler();
-                    return _singleton;
-                }
-                else
-                {
-                    throw new Exception();
-                }
-            }
-           
         }
 
         public void Fill()
