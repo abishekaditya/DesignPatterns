@@ -12,7 +12,8 @@
         public override string Description {
            get
             {
-                if (_beverage.Description.StartsWith("Mocha")){
+                if (_beverage.Description.StartsWith("Mocha"))
+                {
                     return "Double " + _beverage.Description;
                 }
                 else
