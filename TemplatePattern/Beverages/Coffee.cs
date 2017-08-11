@@ -6,7 +6,7 @@ namespace TemplatePattern
     {
         protected override void Brew()
         {
-            Console.WriteLine("Add Coffe Grounds to water and boil");
+            Console.WriteLine("Add Coffee Grounds to water and boil");
         }
 
         protected override void AddCondiments()
