@@ -17,6 +17,7 @@ There are three kinds of Design Patterns
 -----------------------------------------
 
 * [Adapter](/AdapterPattern)
+* [Bridge](/BridgePattern)
 * [Command](/CommandPattern)
 * [Composite](/CompositePattern)
 * [Decorator](/DecoratorPattern)
