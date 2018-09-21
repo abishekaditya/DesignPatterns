@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StrategyPattern", "Strategy
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplatePattern", "TemplatePattern\TemplatePattern.csproj", "{928CD7B2-BB6E-4E07-834E-67B20CA6D698}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BridgePattern", "BridgePattern\BridgePattern.csproj", "{95E7F42A-74B9-4071-9A3C-86EF95A0EB1B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -170,5 +172,17 @@ Global
 		{928CD7B2-BB6E-4E07-834E-67B20CA6D698}.Release|x64.Build.0 = Release|x64
 		{928CD7B2-BB6E-4E07-834E-67B20CA6D698}.Release|x86.ActiveCfg = Release|x86
 		{928CD7B2-BB6E-4E07-834E-67B20CA6D698}.Release|x86.Build.0 = Release|x86
+		{95E7F42A-74B9-4071-9A3C-86EF95A0EB1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95E7F42A-74B9-4071-9A3C-86EF95A0EB1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95E7F42A-74B9-4071-9A3C-86EF95A0EB1B}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{95E7F42A-74B9-4071-9A3C-86EF95A0EB1B}.Debug|x64.Build.0 = Debug|Any CPU
+		{95E7F42A-74B9-4071-9A3C-86EF95A0EB1B}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{95E7F42A-74B9-4071-9A3C-86EF95A0EB1B}.Debug|x86.Build.0 = Debug|Any CPU
+		{95E7F42A-74B9-4071-9A3C-86EF95A0EB1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95E7F42A-74B9-4071-9A3C-86EF95A0EB1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95E7F42A-74B9-4071-9A3C-86EF95A0EB1B}.Release|x64.ActiveCfg = Release|Any CPU
+		{95E7F42A-74B9-4071-9A3C-86EF95A0EB1B}.Release|x64.Build.0 = Release|Any CPU
+		{95E7F42A-74B9-4071-9A3C-86EF95A0EB1B}.Release|x86.ActiveCfg = Release|Any CPU
+		{95E7F42A-74B9-4071-9A3C-86EF95A0EB1B}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
