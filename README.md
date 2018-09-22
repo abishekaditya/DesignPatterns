@@ -23,6 +23,7 @@ There are three kinds of Design Patterns
 * [Decorator](/DecoratorPattern)
 * [Facade](/FacadePattern)
 * [Factory](/FactoryPattern)
+* [Flyweight](/FlyweightPattern)
 * [Iterator](/IteratorPattern)
 * [Observer](/ObserverPattern)
 * [Singleton](/SingletonPattern)
