@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BridgePattern", "BridgePatt
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlyweightPattern", "FlyweightPattern\FlyweightPattern.csproj", "{0067EFC3-FC8D-4F1A-AA92-12323CAD0200}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisitorPattern", "VisitorPattern\VisitorPattern.csproj", "{871F7BE0-B75F-4F9E-9C4D-CE9C4ECE7A88}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -198,5 +200,17 @@ Global
 		{0067EFC3-FC8D-4F1A-AA92-12323CAD0200}.Release|x64.Build.0 = Release|Any CPU
 		{0067EFC3-FC8D-4F1A-AA92-12323CAD0200}.Release|x86.ActiveCfg = Release|Any CPU
 		{0067EFC3-FC8D-4F1A-AA92-12323CAD0200}.Release|x86.Build.0 = Release|Any CPU
+		{871F7BE0-B75F-4F9E-9C4D-CE9C4ECE7A88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{871F7BE0-B75F-4F9E-9C4D-CE9C4ECE7A88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{871F7BE0-B75F-4F9E-9C4D-CE9C4ECE7A88}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{871F7BE0-B75F-4F9E-9C4D-CE9C4ECE7A88}.Debug|x64.Build.0 = Debug|Any CPU
+		{871F7BE0-B75F-4F9E-9C4D-CE9C4ECE7A88}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{871F7BE0-B75F-4F9E-9C4D-CE9C4ECE7A88}.Debug|x86.Build.0 = Debug|Any CPU
+		{871F7BE0-B75F-4F9E-9C4D-CE9C4ECE7A88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{871F7BE0-B75F-4F9E-9C4D-CE9C4ECE7A88}.Release|Any CPU.Build.0 = Release|Any CPU
+		{871F7BE0-B75F-4F9E-9C4D-CE9C4ECE7A88}.Release|x64.ActiveCfg = Release|Any CPU
+		{871F7BE0-B75F-4F9E-9C4D-CE9C4ECE7A88}.Release|x64.Build.0 = Release|Any CPU
+		{871F7BE0-B75F-4F9E-9C4D-CE9C4ECE7A88}.Release|x86.ActiveCfg = Release|Any CPU
+		{871F7BE0-B75F-4F9E-9C4D-CE9C4ECE7A88}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

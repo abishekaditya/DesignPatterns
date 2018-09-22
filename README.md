@@ -30,3 +30,4 @@ There are three kinds of Design Patterns
 * [State](/StatePattern)
 * [Strategy](/StrategyPattern)
 * [Template](/TemplatePattern)
+* [Visitor](/VisitorPattern)
