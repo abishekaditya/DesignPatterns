@@ -1,6 +1,6 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26124.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.156
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdapterPattern", "AdapterPattern\AdapterPattern.csproj", "{79553F75-E8DC-4988-B511-A79CC6A9CDF7}"
 EndProject
@@ -30,7 +30,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlyweightPattern", "Flyweig
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VisitorPattern", "VisitorPattern\VisitorPattern.csproj", "{871F7BE0-B75F-4F9E-9C4D-CE9C4ECE7A88}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FactoryPattern", "FactoryPattern\FactoryPattern.csproj", "{182B58DC-6787-4A09-8BCF-87A96737E5A6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FactoryPattern", "FactoryPattern\FactoryPattern.csproj", "{182B58DC-6787-4A09-8BCF-87A96737E5A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuilderPattern", "BuilderPattern\BuilderPattern\BuilderPattern.csproj", "{D8B3C6D1-4AAD-4ED4-BFAE-582A1B43389C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -222,6 +224,18 @@ Global
 		{182B58DC-6787-4A09-8BCF-87A96737E5A6}.Release|x64.Build.0 = Release|Any CPU
 		{182B58DC-6787-4A09-8BCF-87A96737E5A6}.Release|x86.ActiveCfg = Release|Any CPU
 		{182B58DC-6787-4A09-8BCF-87A96737E5A6}.Release|x86.Build.0 = Release|Any CPU
+		{D8B3C6D1-4AAD-4ED4-BFAE-582A1B43389C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8B3C6D1-4AAD-4ED4-BFAE-582A1B43389C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8B3C6D1-4AAD-4ED4-BFAE-582A1B43389C}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{D8B3C6D1-4AAD-4ED4-BFAE-582A1B43389C}.Debug|x64.Build.0 = Debug|Any CPU
+		{D8B3C6D1-4AAD-4ED4-BFAE-582A1B43389C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D8B3C6D1-4AAD-4ED4-BFAE-582A1B43389C}.Debug|x86.Build.0 = Debug|Any CPU
+		{D8B3C6D1-4AAD-4ED4-BFAE-582A1B43389C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8B3C6D1-4AAD-4ED4-BFAE-582A1B43389C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8B3C6D1-4AAD-4ED4-BFAE-582A1B43389C}.Release|x64.ActiveCfg = Release|Any CPU
+		{D8B3C6D1-4AAD-4ED4-BFAE-582A1B43389C}.Release|x64.Build.0 = Release|Any CPU
+		{D8B3C6D1-4AAD-4ED4-BFAE-582A1B43389C}.Release|x86.ActiveCfg = Release|Any CPU
+		{D8B3C6D1-4AAD-4ED4-BFAE-582A1B43389C}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
