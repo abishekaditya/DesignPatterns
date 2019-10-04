@@ -1,32 +1,19 @@
-﻿namespace BuilderPattern
+﻿using System.Collections.Generic;
+
+namespace BuilderPattern
 {
     public class Hamburger
     {
-        public bool HasBread { get; }
-        public bool HasMeal { get; }
-        public bool HasCheese { get; }
-        public bool HasTomato { get; }
-        public bool HasSalad { get; }
-        public bool HasMayonnaise { get; }
-
-        internal Hamburger(bool hasBread, bool hasMeal, bool hasCheese, bool hasTomato, bool hasSalad, bool hasMayonnaise)
-        {
-            HasBread = hasBread;
-            HasMeal = hasMeal;
-            HasCheese = hasCheese;
-            HasTomato = hasTomato;
-            HasSalad = hasSalad;
-            HasMayonnaise = hasMayonnaise;
-        }
-
+        public int Size { get; set; }
+        public string Shape { get; set; }
+        public string[] Ingredients { get; set; }
         public override string ToString()
         {
-            return (HasBread ? "Bread " : string.Empty)
-                + (HasMeal ? "Meal " : string.Empty)
-                + (HasCheese ? "Cheese " : string.Empty)
-                + (HasTomato ? "Tomato " : string.Empty)
-                + (HasSalad ? "Salad " : string.Empty)
-                + (HasMayonnaise ? "Mayonnaise " : string.Empty);
+            var hamburger="";
+            foreach (var ingredient in Ingredients) {
+                hamburger += $"{ingredient} ";
+            }
+            return $"Ingredients: {hamburger}, Size: {Size}, Shape: {Shape}";
         }
     }
 }

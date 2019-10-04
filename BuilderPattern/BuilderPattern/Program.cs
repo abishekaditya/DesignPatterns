@@ -6,21 +6,15 @@ namespace BuilderPattern
     {
         static void Main()
         {
-            var myHamburger = new HamburgerBuilder()
-                .AddBread()
-                .AddMeal()
-                .AddCheese()
-                .AddTomato()
-                .AddSalad()
-                .AddMayonnaise()
-                .Build();
-            Console.WriteLine($"My hamburger: {myHamburger}");
+            var builder = new MyHamburgerBuilder();
+            var cook = new Cook(builder);
+            var myHamburger = cook.Build();
 
-            var myWifeHamburger = new HamburgerBuilder()
-                .AddBread()
-                .AddSalad()
-                .Build();
-            Console.WriteLine($"My wife's hamburger: {myWifeHamburger}");
+            cook.ChangeBuilder(new WifesHamburgerBuilder());
+            var wifesHamburger = cook.Build();
+
+            Console.WriteLine($"My Hamburger: {myHamburger}");
+            Console.WriteLine($"My Wife's Hamburger: {wifesHamburger}");
         }
     }
 }
