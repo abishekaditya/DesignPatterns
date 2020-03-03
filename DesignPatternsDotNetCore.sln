@@ -36,6 +36,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BuilderPattern", "BuilderPa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChainOfResponsibilityPattern", "ChainOfResponsibilityPattern\ChainOfResponsibilityPattern.csproj", "{B703B66A-310A-45BC-94C9-EEEB57570E16}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediatorPattern", "MediatorPattern\MediatorPattern.csproj", "{82A66FF6-5D66-4E39-8FF8-C8EBA0EB3A2D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -250,6 +252,18 @@ Global
 		{B703B66A-310A-45BC-94C9-EEEB57570E16}.Release|x64.Build.0 = Release|Any CPU
 		{B703B66A-310A-45BC-94C9-EEEB57570E16}.Release|x86.ActiveCfg = Release|Any CPU
 		{B703B66A-310A-45BC-94C9-EEEB57570E16}.Release|x86.Build.0 = Release|Any CPU
+		{82A66FF6-5D66-4E39-8FF8-C8EBA0EB3A2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82A66FF6-5D66-4E39-8FF8-C8EBA0EB3A2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82A66FF6-5D66-4E39-8FF8-C8EBA0EB3A2D}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{82A66FF6-5D66-4E39-8FF8-C8EBA0EB3A2D}.Debug|x64.Build.0 = Debug|Any CPU
+		{82A66FF6-5D66-4E39-8FF8-C8EBA0EB3A2D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{82A66FF6-5D66-4E39-8FF8-C8EBA0EB3A2D}.Debug|x86.Build.0 = Debug|Any CPU
+		{82A66FF6-5D66-4E39-8FF8-C8EBA0EB3A2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82A66FF6-5D66-4E39-8FF8-C8EBA0EB3A2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82A66FF6-5D66-4E39-8FF8-C8EBA0EB3A2D}.Release|x64.ActiveCfg = Release|Any CPU
+		{82A66FF6-5D66-4E39-8FF8-C8EBA0EB3A2D}.Release|x64.Build.0 = Release|Any CPU
+		{82A66FF6-5D66-4E39-8FF8-C8EBA0EB3A2D}.Release|x86.ActiveCfg = Release|Any CPU
+		{82A66FF6-5D66-4E39-8FF8-C8EBA0EB3A2D}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

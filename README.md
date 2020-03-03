@@ -31,3 +31,4 @@ There are three kinds of Design Patterns
 * [Strategy](/StrategyPattern)
 * [Template](/TemplatePattern)
 * [Visitor](/VisitorPattern)
+* [Mediator](/MediatorPattern)
