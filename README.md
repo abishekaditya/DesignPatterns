@@ -32,4 +32,4 @@ There are three kinds of Design Patterns
 * [Template](/TemplatePattern)
 * [Visitor](/VisitorPattern)
 * [Mediator](/MediatorPattern)
-* [Proxy] (/ProxyPattern)
+* [Proxy](/ProxyPattern)
