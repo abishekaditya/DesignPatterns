@@ -11,7 +11,7 @@ namespace SingletonPattern
                 var chocoEggs = ChocolateBoiler.GetInstance();
                 chocoEggs.Fill();
                 chocoEggs.Boil();
-                chocoEggs.Drain();  
+                chocoEggs.Drain();
             }
             catch (Exception)
             {

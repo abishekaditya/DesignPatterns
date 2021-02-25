@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Reflection.Metadata.Ecma335;
 
 namespace FlyweightPattern
 {
@@ -17,7 +16,7 @@ namespace FlyweightPattern
         private void TakeOrders()
         {
             var factory = new BeverageFlyweightFactory();
-            
+
             takeAwayOrders.Add(factory.MakeBeverage(BeverageType.BubbleMilk));
             takeAwayOrders.Add(factory.MakeBeverage(BeverageType.BubbleMilk));
             takeAwayOrders.Add(factory.MakeBeverage(BeverageType.CoconutMilk));

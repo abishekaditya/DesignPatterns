@@ -5,8 +5,8 @@
         private Dimmer _dimmer;
         private Dvd _dvd;
         private DvdPlayer _dvdPlayer;
-        
-        public HomeTheatreFacade(Dimmer dimmer,Dvd dvd, DvdPlayer dvdPlayer)
+
+        public HomeTheatreFacade(Dimmer dimmer, Dvd dvd, DvdPlayer dvdPlayer)
         {
             _dvd = dvd;
             _dimmer = dimmer;

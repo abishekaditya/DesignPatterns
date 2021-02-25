@@ -2,7 +2,7 @@ using System;
 
 namespace VisitorPattern
 {
-    public class StudioVisitor: IUnitVisitor
+    public class StudioVisitor : IUnitVisitor
     {
         public void VisitApartment(Apartment apartment)
         {

@@ -21,7 +21,7 @@ namespace ObserverPattern
         {
             _name = name;
         }
-        
+
         public void OnCompleted()
         {
             throw new NotImplementedException();
@@ -39,7 +39,7 @@ namespace ObserverPattern
             {
                 string op = $"| Temperature : {value.Temperature} Celsius |";
                 Console.Write(op);
-                
+
             }
             if (_name.Contains("P"))
             {
@@ -48,7 +48,7 @@ namespace ObserverPattern
             }
             if (_name.Contains("H"))
             {
-                string op = $"| Humidity : {value.Humidity*100} % |";
+                string op = $"| Humidity : {value.Humidity * 100} % |";
                 Console.Write(op);
             }
             if (!(_name.Contains("T") || _name.Contains("P") || _name.Contains("H")))

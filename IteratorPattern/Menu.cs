@@ -14,6 +14,6 @@
             Price = price;
             Vegetarian = vegetarian;
         }
-        
+
     }
 }

@@ -2,7 +2,7 @@ using System;
 
 namespace BridgePattern
 {
-    public class FlyingEnchantment:IEnchantment
+    public class FlyingEnchantment : IEnchantment
     {
         public void OnActivate()
         {

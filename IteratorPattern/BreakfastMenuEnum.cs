@@ -37,7 +37,7 @@ namespace IteratorPattern
             {
                 try
                 {
-                    return (Menu) _items[_position];
+                    return (Menu)_items[_position];
                 }
                 catch (IndexOutOfRangeException)
                 {

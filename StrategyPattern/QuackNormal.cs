@@ -7,6 +7,6 @@ namespace Ducks
         public void Quack()
         {
             Console.WriteLine("Quack Quack");
-        }      
+        }
     }
 }

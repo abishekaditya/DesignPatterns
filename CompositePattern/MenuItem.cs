@@ -18,7 +18,7 @@ namespace CompositePattern
 
         public override double Price { get; }
 
-        public override  bool Vegetarian { get; }
+        public override bool Vegetarian { get; }
 
         public override void Print()
         {

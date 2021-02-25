@@ -26,7 +26,7 @@ namespace IteratorPattern
         {
             foreach (var item in iter)
             {
-                var i = (Menu) item;
+                var i = (Menu)item;
                 Console.WriteLine($"{i.Name}  Rs. {i.Price} {  (i.Vegetarian ? "*" : "x") } \n {i.Description} ");
 
             }

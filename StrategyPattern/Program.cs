@@ -6,7 +6,8 @@
         private IFlyBehaviour _flyer;
 
 
-        public IQuackBehaviour Quacker {
+        public IQuackBehaviour Quacker
+        {
             set
             {
                 _quacker = value;
@@ -52,7 +53,7 @@
     {
         private static void Main()
         {
-            var mallard = new MallardDuck {Quacker = new QuackNormal()};
+            var mallard = new MallardDuck { Quacker = new QuackNormal() };
             mallard.Display();
             mallard.Flyer = new FlyWings();
             mallard.Display();

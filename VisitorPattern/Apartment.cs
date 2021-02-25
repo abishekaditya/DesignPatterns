@@ -1,6 +1,6 @@
 namespace VisitorPattern
 {
-    public class Apartment: Unit
+    public class Apartment : Unit
     {
         public Apartment(params Unit[] units) : base(units)
         {

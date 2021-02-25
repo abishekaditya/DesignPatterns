@@ -5,9 +5,9 @@ namespace SingletonPattern
     internal partial class ChocolateBoiler
     {
         private static readonly Lazy<ChocolateBoiler> _singleton = new Lazy<ChocolateBoiler>(() => new ChocolateBoiler());
-        
+
         public static ChocolateBoiler GetInstance() => _singleton.Value;
-      
+
         private Status _boiler;
 
         private ChocolateBoiler()

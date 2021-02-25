@@ -1,23 +1,29 @@
 ﻿namespace BuilderPattern
 {
-    public class MyHamburgerBuilder : IBuilder {
+    public class MyHamburgerBuilder : IBuilder
+    {
         private Hamburger _hamburger;
-        public void AddIngredients() {
+        public void AddIngredients()
+        {
             _hamburger.Ingredients = new string[] { "Bread", "Meat", "Tomato", "Salad", "Mayonnaise" };
         }
 
-        public void AddShape() {
+        public void AddShape()
+        {
             _hamburger.Shape = "Kite";
         }
 
-        public void AddSize() {
+        public void AddSize()
+        {
             _hamburger.Size = 10; //inches
         }
-        public void Reset() {
+        public void Reset()
+        {
             _hamburger = new Hamburger();
         }
 
-        public Hamburger Build() {
+        public Hamburger Build()
+        {
             return _hamburger;
         }
 

@@ -33,11 +33,11 @@ namespace CommandPattern
             Console.WriteLine();
             var light = new Light("Hall");
 
-            ICommand[] partyOn = {new LightOffCommand(light), bikeDoorOpen, carDoorOpen};
-            ICommand[] partyOff = {new LightOnCommand(light), bikeDoorClose, carDoorClose};
+            ICommand[] partyOn = { new LightOffCommand(light), bikeDoorOpen, carDoorOpen };
+            ICommand[] partyOff = { new LightOnCommand(light), bikeDoorClose, carDoorClose };
 
 
-            remote[2] = new OnOffStruct {On = new MacroCommand(partyOn), Off = new MacroCommand(partyOff)};
+            remote[2] = new OnOffStruct { On = new MacroCommand(partyOn), Off = new MacroCommand(partyOff) };
 
             try
             {

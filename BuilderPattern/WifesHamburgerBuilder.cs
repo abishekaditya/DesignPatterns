@@ -1,25 +1,30 @@
-﻿using System;
+﻿namespace BuilderPattern
+{
 
-namespace BuilderPattern {
-    
-    public class WifesHamburgerBuilder : IBuilder {
+    public class WifesHamburgerBuilder : IBuilder
+    {
         private Hamburger _hamburger;
-        public void AddIngredients() {
+        public void AddIngredients()
+        {
             _hamburger.Ingredients = new string[] { "Bread", "Salad" };
         }
 
-        public void AddShape() {
+        public void AddShape()
+        {
             _hamburger.Shape = "Cuboid";
         }
 
-        public void AddSize() {
+        public void AddSize()
+        {
             _hamburger.Size = 6; //inches
         }
 
-        public void Reset() {
+        public void Reset()
+        {
             _hamburger = new Hamburger();
         }
-        public Hamburger Build() {
+        public Hamburger Build()
+        {
             return _hamburger;
         }
     }

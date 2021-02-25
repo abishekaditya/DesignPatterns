@@ -9,15 +9,15 @@
 
             if (type.Equals("Cheese"))
             {
-                pizza = new CheesePizza(ingredients) {Name = "NY Style Cheese"};
+                pizza = new CheesePizza(ingredients) { Name = "NY Style Cheese" };
             }
             else if (type.Equals("Clam"))
             {
-                pizza = new ClamPizza(ingredients) {Name = "NY Style Clam"};
+                pizza = new ClamPizza(ingredients) { Name = "NY Style Clam" };
             }
             else
             {
-                pizza = new VeggiePizza(ingredients) {Name = "NY Style Veggie"};
+                pizza = new VeggiePizza(ingredients) { Name = "NY Style Veggie" };
             }
             pizza.Color = "blue";
             return pizza;

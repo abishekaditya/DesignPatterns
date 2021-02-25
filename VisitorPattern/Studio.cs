@@ -1,6 +1,6 @@
 namespace VisitorPattern
 {
-    public class Studio: Unit
+    public class Studio : Unit
     {
         public Studio(params Unit[] units) : base(units)
         {

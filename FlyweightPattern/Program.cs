@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace FlyweightPattern
+﻿namespace FlyweightPattern
 {
     static class Program
     {

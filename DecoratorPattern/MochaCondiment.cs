@@ -9,8 +9,9 @@
             this._beverage = beverage;
         }
 
-        public override string Description {
-           get
+        public override string Description
+        {
+            get
             {
                 if (_beverage.Description.StartsWith("Mocha"))
                 {
