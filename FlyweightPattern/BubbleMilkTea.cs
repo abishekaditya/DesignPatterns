@@ -2,7 +2,7 @@ using System;
 
 namespace FlyweightPattern
 {
-    public class BubbleMilkTea: IBeverage
+    public class BubbleMilkTea : IBeverage
     {
         public BubbleMilkTea()
         {

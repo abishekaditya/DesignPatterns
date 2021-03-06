@@ -6,7 +6,7 @@ namespace CompositePattern
     {
         public virtual void Add(MenuComponent component)
         {
-           throw new NotImplementedException(); 
+            throw new NotImplementedException();
         }
 
         public virtual void Remove(MenuComponent component)

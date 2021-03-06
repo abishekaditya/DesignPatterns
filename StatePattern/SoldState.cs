@@ -18,7 +18,7 @@ namespace StatePattern
 
         public void EjectQuarter()
         {
-           Console.WriteLine("Can't eject, already turned the crank");
+            Console.WriteLine("Can't eject, already turned the crank");
         }
 
         public void TurnCrank()

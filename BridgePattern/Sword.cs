@@ -2,7 +2,7 @@ using System;
 
 namespace BridgePattern
 {
-    public class Sword:IWeapon
+    public class Sword : IWeapon
     {
         private readonly IEnchantment _enchantment;
 

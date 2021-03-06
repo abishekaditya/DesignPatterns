@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-
+﻿
 namespace BuilderPattern
 {
     public class Hamburger
@@ -9,8 +8,9 @@ namespace BuilderPattern
         public string[] Ingredients { get; set; }
         public override string ToString()
         {
-            var hamburger="";
-            foreach (var ingredient in Ingredients) {
+            var hamburger = "";
+            foreach (var ingredient in Ingredients)
+            {
                 hamburger += $"{ingredient} ";
             }
             return $"Ingredients: {hamburger}, Size: {Size}, Shape: {Shape}";

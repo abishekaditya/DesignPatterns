@@ -33,7 +33,7 @@ namespace StatePattern
             {
                 Machine.State = Machine.SoldState;
             }
-                            }
+        }
 
         public void Dispense()
         {

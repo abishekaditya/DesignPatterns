@@ -6,7 +6,7 @@
         {
             Pizza pizza;
             IIngredientsFactory ingredients = new ChicagoIngredientsFactory();
-           
+
             if (type.Equals("Cheese"))
             {
                 pizza = new CheesePizza(ingredients);

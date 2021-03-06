@@ -4,7 +4,7 @@ namespace MediatorPattern
 {
     class Tester : Colleague
     {
-        public Tester(Mediator mediator) : base(mediator) {}
+        public Tester(Mediator mediator) : base(mediator) { }
 
         public override void Notify(string message)
         {

@@ -23,7 +23,7 @@ namespace StatePattern
 
         public void TurnCrank()
         {
-           Console.WriteLine("Can't turn crank without a quarter");
+            Console.WriteLine("Can't turn crank without a quarter");
         }
 
         public void Dispense()

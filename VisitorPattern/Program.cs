@@ -12,7 +12,7 @@ namespace VisitorPattern
             apartment.Accept(new ApartmentVisitor());
             apartment.Accept(new LivingRoomVisitor());
             apartment.Accept(new BedroomVisitor());
-            
+
             Console.WriteLine("Visiting a Studio");
             studio.Accept(new StudioVisitor());
             studio.Accept(new LivingRoomVisitor());

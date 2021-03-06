@@ -8,7 +8,7 @@
             sword.Wield();
             sword.Swing();
             sword.Unwield();
-            
+
             IWeapon hammer = new Hammer(new SoulEatingEnchantment());
             hammer.Wield();
             hammer.Swing();

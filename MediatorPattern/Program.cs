@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace MediatorPattern
+﻿namespace MediatorPattern
 {
     class Program
     {

@@ -9,7 +9,7 @@ namespace FacadePattern
             var dimmer = new Dimmer();
             var dvdPlayer = new DvdPlayer();
             var dvd = new Dvd("Gone with the Wind 2 : Electric Bugaloo");
-            var homeTheater = new HomeTheatreFacade(dimmer,dvd,dvdPlayer);
+            var homeTheater = new HomeTheatreFacade(dimmer, dvd, dvdPlayer);
 
             homeTheater.WatchMovie();
             Console.WriteLine();

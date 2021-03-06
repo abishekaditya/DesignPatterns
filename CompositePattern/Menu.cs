@@ -26,7 +26,7 @@ namespace CompositePattern
 
         public override MenuComponent GetChild(int i)
         {
-            return  _components[i];
+            return _components[i];
         }
 
         public override string Name { get; }

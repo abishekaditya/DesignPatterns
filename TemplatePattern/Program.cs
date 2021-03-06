@@ -13,7 +13,7 @@ namespace TemplatePattern
             tea.WantsCondiments = true;
             tea.AddSugar = 5;
             tea.Prepare();
-            
+
             Console.WriteLine();
             coffee.WantsCondiments = true;
             coffee.Prepare();
