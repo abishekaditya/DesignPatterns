@@ -5,8 +5,4 @@
     <TargetFramework>netcoreapp2.1</TargetFramework>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="Abstract Factory\Ingredients\Interfaces\" />
-  </ItemGroup>
-
 </Project>
