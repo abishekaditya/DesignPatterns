@@ -1,6 +1,6 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29920.165
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32825.248
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdapterPattern", "AdapterPattern\AdapterPattern.csproj", "{79553F75-E8DC-4988-B511-A79CC6A9CDF7}"
 EndProject
@@ -38,7 +38,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MediatorPattern", "Mediator
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BuilderPattern", "BuilderPattern\BuilderPattern.csproj", "{274786D8-2E30-40D7-81B5-DFA3872CF9B6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProxyPattern", "ProxyPattern\ProxyPattern.csproj", "{0F8297F6-FA4F-44B6-BF99-0FF71ECCF87A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProxyPattern", "ProxyPattern\ProxyPattern.csproj", "{0F8297F6-FA4F-44B6-BF99-0FF71ECCF87A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SingletonPattern.Tests", "SingletonPattern.Tests\SingletonPattern.Tests.csproj", "{7A21A074-AEBB-4B33-80BA-D7DFBE87A449}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -278,6 +280,18 @@ Global
 		{0F8297F6-FA4F-44B6-BF99-0FF71ECCF87A}.Release|x64.Build.0 = Release|Any CPU
 		{0F8297F6-FA4F-44B6-BF99-0FF71ECCF87A}.Release|x86.ActiveCfg = Release|Any CPU
 		{0F8297F6-FA4F-44B6-BF99-0FF71ECCF87A}.Release|x86.Build.0 = Release|Any CPU
+		{7A21A074-AEBB-4B33-80BA-D7DFBE87A449}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A21A074-AEBB-4B33-80BA-D7DFBE87A449}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A21A074-AEBB-4B33-80BA-D7DFBE87A449}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{7A21A074-AEBB-4B33-80BA-D7DFBE87A449}.Debug|x64.Build.0 = Debug|Any CPU
+		{7A21A074-AEBB-4B33-80BA-D7DFBE87A449}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{7A21A074-AEBB-4B33-80BA-D7DFBE87A449}.Debug|x86.Build.0 = Debug|Any CPU
+		{7A21A074-AEBB-4B33-80BA-D7DFBE87A449}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A21A074-AEBB-4B33-80BA-D7DFBE87A449}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A21A074-AEBB-4B33-80BA-D7DFBE87A449}.Release|x64.ActiveCfg = Release|Any CPU
+		{7A21A074-AEBB-4B33-80BA-D7DFBE87A449}.Release|x64.Build.0 = Release|Any CPU
+		{7A21A074-AEBB-4B33-80BA-D7DFBE87A449}.Release|x86.ActiveCfg = Release|Any CPU
+		{7A21A074-AEBB-4B33-80BA-D7DFBE87A449}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
