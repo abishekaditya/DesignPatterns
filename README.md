@@ -5,6 +5,8 @@ There are better alternatives available for some of them in the .NET Framework, 
 
 Any comments and suggestions are welcome. If you want to add a new design pattern implementation, just follow the naming convention, fork my repo and submit a pull request. Same goes for any improvements and modifications.
 
+This was created as a C# alternative to Java while reading https://www.oreilly.com/library/view/head-first-design/0596007124/ <- take a look at it if anything confuses you.
+
 ## Types of Design Patterns
 ---------------------------
 There are three kinds of Design Patterns:
