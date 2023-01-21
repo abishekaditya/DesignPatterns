@@ -8,11 +8,11 @@ namespace FactoryPattern
         {
             Console.WriteLine("Yankees fan orders:");
             var yankees = new NyPizzaFactory();
-            yankees.Order("Cheese");
+            yankees.Order(PizzaType.Cheese);
             Console.WriteLine();
             Console.WriteLine("Cubs fan orders:");
             var cubs = new ChicagoPizzaFactory();
-            cubs.Order("Clam");
+            cubs.Order(PizzaType.Clam);
         }
     }
 }

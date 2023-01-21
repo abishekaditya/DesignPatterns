@@ -2,7 +2,7 @@
 {
     abstract class PizzaFactory
     {
-        public Pizza Order(string type)
+        public Pizza Order(PizzaType type)
         {
             var pizza = Create(type);
             pizza.Prepare();
@@ -12,6 +12,6 @@
             return pizza;
         }
 
-        protected abstract Pizza Create(string type);
+        protected abstract Pizza Create(PizzaType type);
     }
 }
