@@ -35,3 +35,4 @@ There are three kinds of Design Patterns:
 * [Visitor](/VisitorPattern)
 * [Mediator](/MediatorPattern)
 * [Proxy](/ProxyPattern)
+
