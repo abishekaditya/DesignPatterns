@@ -6,6 +6,7 @@ namespace AdapterPattern
     {
         private readonly ITurkey _turkey;
 
+        // Adapter
         public TurkeyAdapter(ITurkey turkey)
         {
             _turkey = turkey;
