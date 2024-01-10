@@ -2,22 +2,26 @@
 {
     class NyPizzaFactory : PizzaFactory
     {
-        protected override Pizza Create(string type)
+        private readonly string nyStyleCheese = "NY Style Cheese";
+        private readonly string nyStyleClam = "NY Style Clam";
+        private readonly string nyStyleVeggie = "NY Style Veggie";
+
+        protected override Pizza Create(PizzaType type)
         {
             Pizza pizza;
             IIngredientsFactory ingredients = new NyIngredientsFactory();
 
-            if (type.Equals("Cheese"))
+            if (type == PizzaType.Cheese)
             {
-                pizza = new CheesePizza(ingredients) { Name = "NY Style Cheese" };
+                pizza = new CheesePizza(ingredients) { Name = nyStyleCheese };
             }
-            else if (type.Equals("Clam"))
+            else if (type == PizzaType.Clam)
             {
-                pizza = new ClamPizza(ingredients) { Name = "NY Style Clam" };
+                pizza = new ClamPizza(ingredients) { Name = nyStyleClam };
             }
             else
             {
-                pizza = new VeggiePizza(ingredients) { Name = "NY Style Veggie" };
+                pizza = new VeggiePizza(ingredients) { Name = nyStyleVeggie };
             }
             pizza.Color = "blue";
             return pizza;
