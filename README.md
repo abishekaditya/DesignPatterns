@@ -14,7 +14,7 @@ There are three kinds of Design Patterns:
 * Creational
 * Structural
 * Behavioral
-
+* my touch
 ## List of Design Pattern Implementations
 -----------------------------------------
 
