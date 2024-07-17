@@ -1,22 +1,19 @@
-﻿using System;
+﻿namespace PrototypePattern;
 
-namespace PrototypePattern
+class Circle : IFigure
 {
-    class Circle : IFigure
+    readonly int _radius;
+    public Circle(int r)
     {
-        readonly int _radius;
-        public Circle(int r)
-        {
-            _radius = r;
-        }
+        _radius = r;
+    }
 
-        public object Clone()
-        {
-            return new Circle(_radius);
-        }
-        public void GetInfo()
-        {
-            Console.WriteLine($"Circle with radius {_radius}");
-        }
+    public object Clone()
+    {
+        return new Circle(_radius);
+    }
+    public void GetInfo()
+    {
+        Console.WriteLine($"Circle with radius {_radius}");
     }
 }

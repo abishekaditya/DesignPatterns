@@ -1,13 +1,12 @@
-﻿namespace IteratorPattern
+﻿namespace IteratorPattern;
+
+static class Program
 {
-    static class Program
+    private static void Main()
     {
-        private static void Main()
-        {
-            var breakfast = new BreakfastMenu();
-            var dinner = new DinnerMenu();
-            var waiter = new Client(breakfast, dinner);
-            waiter.PrintMenu();
-        }
+        var breakfast = new BreakfastMenu();
+        var dinner = new DinnerMenu();
+        var waiter = new Client(breakfast, dinner);
+        waiter.PrintMenu();
     }
 }

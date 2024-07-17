@@ -1,7 +1,6 @@
-﻿namespace FactoryPattern
+﻿namespace FactoryPattern;
+
+public interface IDough
 {
-    public interface IDough
-    {
-        string Name { get; }
-    }
+    string Name { get; }
 }

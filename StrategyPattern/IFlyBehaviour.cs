@@ -1,7 +1,6 @@
-﻿namespace Ducks
+﻿namespace Ducks;
+
+internal interface IFlyBehaviour
 {
-    internal interface IFlyBehaviour
-    {
-        void Fly();
-    }
+    void Fly();
 }

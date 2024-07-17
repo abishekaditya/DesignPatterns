@@ -1,24 +1,21 @@
-using System;
+namespace VisitorPattern;
 
-namespace VisitorPattern
+public class LivingRoomVisitor : IUnitVisitor
 {
-    public class LivingRoomVisitor : IUnitVisitor
+    public void VisitApartment(Apartment apartment)
     {
-        public void VisitApartment(Apartment apartment)
-        {
-        }
+    }
 
-        public void VisitStudio(Studio studio)
-        {
-        }
+    public void VisitStudio(Studio studio)
+    {
+    }
 
-        public void VisitBedroom(Bedroom bedroom)
-        {
-        }
+    public void VisitBedroom(Bedroom bedroom)
+    {
+    }
 
-        public void VisitLivingRoom(LivingRoom livingRoom)
-        {
-            Console.WriteLine("This is the living room");
-        }
+    public void VisitLivingRoom(LivingRoom livingRoom)
+    {
+        Console.WriteLine("This is the living room");
     }
 }

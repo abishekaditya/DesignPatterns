@@ -1,10 +1,9 @@
-namespace VisitorPattern
+namespace VisitorPattern;
+
+public interface IUnitVisitor
 {
-    public interface IUnitVisitor
-    {
-        void VisitApartment(Apartment apartment);
-        void VisitStudio(Studio studio);
-        void VisitBedroom(Bedroom bedroom);
-        void VisitLivingRoom(LivingRoom livingRoom);
-    }
+    void VisitApartment(Apartment apartment);
+    void VisitStudio(Studio studio);
+    void VisitBedroom(Bedroom bedroom);
+    void VisitLivingRoom(LivingRoom livingRoom);
 }

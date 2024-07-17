@@ -1,8 +1,7 @@
-﻿namespace AdapterPattern
+﻿namespace AdapterPattern;
+
+public interface IDuck
 {
-    public interface IDuck
-    {
-        void Quack();
-        void Fly();
-    }
+    void Quack();
+    void Fly();
 }

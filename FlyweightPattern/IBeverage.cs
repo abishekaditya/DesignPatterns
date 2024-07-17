@@ -1,7 +1,6 @@
-namespace FlyweightPattern
+namespace FlyweightPattern;
+
+public interface IBeverage
 {
-    public interface IBeverage
-    {
-        void Drink();
-    }
+    void Drink();
 }

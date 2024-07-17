@@ -1,24 +1,21 @@
-﻿using System;
+﻿namespace CommandPattern;
 
-namespace CommandPattern
+public class Light
 {
-    public class Light
+    private readonly string _name;
+
+    public Light(string name)
     {
-        private readonly string _name;
+        _name = name;
+    }
 
-        public Light(string name)
-        {
-            _name = name;
-        }
+    internal void On()
+    {
+        Console.WriteLine($"{_name} Light On");
+    }
 
-        internal void On()
-        {
-            Console.WriteLine($"{_name} Light On");
-        }
-
-        internal void Off()
-        {
-            Console.WriteLine($"{_name} Light Off");
-        }
+    internal void Off()
+    {
+        Console.WriteLine($"{_name} Light Off");
     }
 }

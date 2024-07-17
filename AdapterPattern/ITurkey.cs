@@ -1,8 +1,7 @@
-﻿namespace AdapterPattern
+﻿namespace AdapterPattern;
+
+public interface ITurkey
 {
-    public interface ITurkey
-    {
-        void Gobble();
-        void Fly();
-    }
+    void Gobble();
+    void Fly();
 }

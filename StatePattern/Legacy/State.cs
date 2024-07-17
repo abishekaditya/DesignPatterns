@@ -1,7 +1,6 @@
-﻿namespace StatePattern.Legacy
+﻿namespace StatePattern.Legacy;
+
+public enum State
 {
-    public enum State
-    {
-        Sold, HasQuarters, NoQuarters, NoGumballs
-    }
+    Sold, HasQuarters, NoQuarters, NoGumballs
 }

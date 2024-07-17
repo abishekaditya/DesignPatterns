@@ -1,17 +1,16 @@
-﻿namespace CompositePattern
+﻿namespace CompositePattern;
+
+public class Client
 {
-    public class Client
+    private readonly MenuComponent _menus;
+
+    public Client(MenuComponent menus)
     {
-        private readonly MenuComponent _menus;
+        _menus = menus;
+    }
 
-        public Client(MenuComponent menus)
-        {
-            _menus = menus;
-        }
-
-        public void Print()
-        {
-            _menus.Print();
-        }
+    public void Print()
+    {
+        _menus.Print();
     }
 }

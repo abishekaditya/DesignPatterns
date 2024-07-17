@@ -1,12 +1,9 @@
-﻿using System;
+﻿namespace Ducks;
 
-namespace Ducks
+internal class QuackNope : IQuackBehaviour
 {
-    internal class QuackNope : IQuackBehaviour
+    public void Quack()
     {
-        public void Quack()
-        {
-            Console.WriteLine("...");
-        }
+        Console.WriteLine("...");
     }
 }

@@ -1,11 +1,10 @@
-﻿namespace FlyweightPattern
+﻿namespace FlyweightPattern;
+
+static class Program
 {
-    static class Program
+    private static void Main()
     {
-        private static void Main()
-        {
-            var teaShop = new BubbleTeaShop();
-            teaShop.Enumerate();
-        }
+        var teaShop = new BubbleTeaShop();
+        teaShop.Enumerate();
     }
 }

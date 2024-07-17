@@ -1,10 +1,9 @@
-namespace BridgePattern
+namespace BridgePattern;
+
+public interface IWeapon
 {
-    public interface IWeapon
-    {
-        void Wield();
-        void Swing();
-        void Unwield();
-        IEnchantment GetEnchantment();
-    }
+    void Wield();
+    void Swing();
+    void Unwield();
+    IEnchantment GetEnchantment();
 }

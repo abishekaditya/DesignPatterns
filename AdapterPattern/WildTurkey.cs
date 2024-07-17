@@ -1,17 +1,14 @@
-﻿using System;
+﻿namespace AdapterPattern;
 
-namespace AdapterPattern
+class WildTurkey : ITurkey
 {
-    class WildTurkey : ITurkey
+    public void Gobble()
     {
-        public void Gobble()
-        {
-            Console.WriteLine("Gobble Gobble Gobble");
-        }
+        Console.WriteLine("Gobble Gobble Gobble");
+    }
 
-        public void Fly()
-        {
-            Console.WriteLine("Flies 100 Metres");
-        }
+    public void Fly()
+    {
+        Console.WriteLine("Flies 100 Metres");
     }
 }

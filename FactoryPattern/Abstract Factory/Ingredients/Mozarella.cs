@@ -1,7 +1,6 @@
-﻿namespace FactoryPattern
+﻿namespace FactoryPattern;
+
+internal class Mozarella : ICheese
 {
-    internal class Mozarella : ICheese
-    {
-        public string Name => "Mozarella";
-    }
+    public string Name => "Mozarella";
 }

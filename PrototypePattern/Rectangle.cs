@@ -1,24 +1,21 @@
-﻿using System;
+﻿namespace PrototypePattern;
 
-namespace PrototypePattern
+class Rectangle : IFigure
 {
-    class Rectangle : IFigure
+    readonly int _width;
+    readonly int _height;
+    public Rectangle(int w, int h)
     {
-        readonly int _width;
-        readonly int _height;
-        public Rectangle(int w, int h)
-        {
-            _width = w;
-            _height = h;
-        }
+        _width = w;
+        _height = h;
+    }
 
-        public object Clone()
-        {
-            return new Rectangle(_width, _height);
-        }
-        public void GetInfo()
-        {
-            Console.WriteLine($"Rectangle height {_height} and width {_width}");
-        }
+    public object Clone()
+    {
+        return new Rectangle(_width, _height);
+    }
+    public void GetInfo()
+    {
+        Console.WriteLine($"Rectangle height {_height} and width {_width}");
     }
 }

@@ -1,7 +1,6 @@
-﻿namespace FactoryPattern
+﻿namespace FactoryPattern;
+
+public interface ISauce
 {
-    public interface ISauce
-    {
-        string Name { get; }
-    }
+    string Name { get; }
 }

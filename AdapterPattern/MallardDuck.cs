@@ -1,17 +1,14 @@
-﻿using System;
+﻿namespace AdapterPattern;
 
-namespace AdapterPattern
+class MallardDuck : IDuck
 {
-    class MallardDuck : IDuck
+    public void Quack()
     {
-        public void Quack()
-        {
-            Console.WriteLine("Quack Quack Quack");
-        }
+        Console.WriteLine("Quack Quack Quack");
+    }
 
-        public void Fly()
-        {
-            Console.WriteLine("Flies 500 Metres");
-        }
+    public void Fly()
+    {
+        Console.WriteLine("Flies 500 Metres");
     }
 }

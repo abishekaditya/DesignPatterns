@@ -1,24 +1,21 @@
-﻿using System;
+﻿namespace CommandPattern;
 
-namespace CommandPattern
+internal class Garage
 {
-    internal class Garage
+    private readonly string _name;
+
+    public Garage(string name)
     {
-        private readonly string _name;
+        _name = name;
+    }
 
-        public Garage(string name)
-        {
-            _name = name;
-        }
+    internal void Open()
+    {
+        Console.WriteLine($"{_name} Garage Opened");
+    }
 
-        internal void Open()
-        {
-            Console.WriteLine($"{_name} Garage Opened");
-        }
-
-        internal void Close()
-        {
-            Console.WriteLine($"{_name} Garage Closed");
-        }
+    internal void Close()
+    {
+        Console.WriteLine($"{_name} Garage Closed");
     }
 }

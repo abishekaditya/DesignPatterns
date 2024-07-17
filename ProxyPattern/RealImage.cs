@@ -1,27 +1,24 @@
-﻿using System;
+﻿namespace ProxyPattern;
 
-namespace ProxyPattern
+
+public class RealImage : Image
 {
 
-    public class RealImage : Image
+    private string _fileName;
+
+    public RealImage(string fileName)
     {
+        _fileName = fileName;
+        loadFromDisk(_fileName);
+    }
 
-        private string _fileName;
+    public void display()
+    {
+        Console.WriteLine("Displaying " + _fileName);
+    }
 
-        public RealImage(string fileName)
-        {
-            _fileName = fileName;
-            loadFromDisk(_fileName);
-        }
-
-        public void display()
-        {
-            Console.WriteLine("Displaying " + _fileName);
-        }
-
-        private void loadFromDisk(string fileName)
-        {
-            Console.WriteLine("Loading " + fileName);
-        }
+    private void loadFromDisk(string fileName)
+    {
+        Console.WriteLine("Loading " + fileName);
     }
 }

@@ -1,9 +1,8 @@
-namespace BridgePattern
+namespace BridgePattern;
+
+public interface IEnchantment
 {
-    public interface IEnchantment
-    {
-        void OnActivate();
-        void Apply();
-        void OnDeactivate();
-    }
+    void OnActivate();
+    void Apply();
+    void OnDeactivate();
 }

@@ -1,8 +1,7 @@
-﻿namespace FactoryPattern
-{
-    internal class Pepper : IVeggies
-    {
+﻿namespace FactoryPattern;
 
-        public string Name => "Bell Peppers";
-    }
+internal class Pepper : IVeggies
+{
+
+    public string Name => "Bell Peppers";
 }

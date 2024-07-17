@@ -1,35 +1,33 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 
-namespace IteratorPattern
+namespace IteratorPattern;
+
+public class Client
 {
-    public class Client
+    private IEnumerable _breakfast;
+    private IEnumerable _dinner;
+
+    public Client(BreakfastMenu breakfast, DinnerMenu dinner)
     {
-        private IEnumerable _breakfast;
-        private IEnumerable _dinner;
+        this._breakfast = breakfast.Items;
+        this._dinner = dinner.Items;
+    }
 
-        public Client(BreakfastMenu breakfast, DinnerMenu dinner)
+    public void PrintMenu()
+    {
+        var breakfast = _breakfast;
+        PrintMenu(breakfast);
+        var dinner = _dinner;
+        PrintMenu(dinner);
+    }
+
+    private void PrintMenu(IEnumerable iter)
+    {
+        foreach (var item in iter)
         {
-            this._breakfast = breakfast.Items;
-            this._dinner = dinner.Items;
-        }
+            var i = (Menu)item;
+            Console.WriteLine($"{i.Name}  Rs. {i.Price} {(i.Vegetarian ? "*" : "x")} \n {i.Description} ");
 
-        public void PrintMenu()
-        {
-            var breakfast = _breakfast;
-            PrintMenu(breakfast);
-            var dinner = _dinner;
-            PrintMenu(dinner);
-        }
-
-        private void PrintMenu(IEnumerable iter)
-        {
-            foreach (var item in iter)
-            {
-                var i = (Menu)item;
-                Console.WriteLine($"{i.Name}  Rs. {i.Price} {  (i.Vegetarian ? "*" : "x") } \n {i.Description} ");
-
-            }
         }
     }
 }

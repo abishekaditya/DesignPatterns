@@ -1,17 +1,14 @@
-﻿using System;
+﻿namespace CommandPattern;
 
-namespace CommandPattern
+internal class NoCommand : ICommand
 {
-    internal class NoCommand : ICommand
+    public void Execute()
     {
-        public void Execute()
-        {
-            Console.WriteLine("No Command Assigned");
-        }
+        Console.WriteLine("No Command Assigned");
+    }
 
-        public void Undo()
-        {
-            Execute();
-        }
+    public void Undo()
+    {
+        Execute();
     }
 }

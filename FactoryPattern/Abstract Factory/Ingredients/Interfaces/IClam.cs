@@ -1,7 +1,6 @@
-﻿namespace FactoryPattern
+﻿namespace FactoryPattern;
+
+public interface IClam
 {
-    public interface IClam
-    {
-        string Name { get; }
-    }
+    string Name { get; }
 }

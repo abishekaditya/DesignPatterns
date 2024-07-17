@@ -1,7 +1,6 @@
-﻿namespace FactoryPattern
+﻿namespace FactoryPattern;
+
+internal class Olive : IVeggies
 {
-    internal class Olive : IVeggies
-    {
-        public string Name => "Olives";
-    }
+    public string Name => "Olives";
 }

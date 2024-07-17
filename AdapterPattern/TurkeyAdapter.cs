@@ -1,27 +1,24 @@
-﻿using System;
+﻿namespace AdapterPattern;
 
-namespace AdapterPattern
+public class TurkeyAdapter : IDuck
 {
-    public class TurkeyAdapter : IDuck
+    private readonly ITurkey _turkey;
+
+    public TurkeyAdapter(ITurkey turkey)
     {
-        private readonly ITurkey _turkey;
+        _turkey = turkey;
+    }
+    public void Quack()
+    {
+        _turkey.Gobble();
+    }
 
-        public TurkeyAdapter(ITurkey turkey)
+    public void Fly()
+    {
+        for (var i = 0; i < 5; i++)
         {
-            _turkey = turkey;
-        }
-        public void Quack()
-        {
-            _turkey.Gobble();
-        }
-
-        public void Fly()
-        {
-            for (var i = 0; i < 5; i++)
-            {
-                _turkey.Fly();
-                Console.WriteLine("Resting..");
-            }
+            _turkey.Fly();
+            Console.WriteLine("Resting..");
         }
     }
 }

@@ -1,7 +1,6 @@
-﻿namespace FactoryPattern
+﻿namespace FactoryPattern;
+
+internal class PlumTomato : ISauce
 {
-    internal class PlumTomato : ISauce
-    {
-        public string Name => "Plum Tomato";
-    }
+    public string Name => "Plum Tomato";
 }

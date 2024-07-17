@@ -1,10 +1,9 @@
-﻿namespace StatePattern
+﻿namespace StatePattern;
+
+public interface IState
 {
-    public interface IState
-    {
-        void InsertQuarter();
-        void EjectQuarter();
-        void TurnCrank();
-        void Dispense();
-    }
+    void InsertQuarter();
+    void EjectQuarter();
+    void TurnCrank();
+    void Dispense();
 }

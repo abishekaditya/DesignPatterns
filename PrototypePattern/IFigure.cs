@@ -1,9 +1,6 @@
-﻿using System;
+﻿namespace PrototypePattern;
 
-namespace PrototypePattern
+interface IFigure : ICloneable
 {
-    interface IFigure : ICloneable
-    {
-        void GetInfo();
-    }
+    void GetInfo();
 }

@@ -1,7 +1,6 @@
-namespace MediatorPattern
+namespace MediatorPattern;
+
+abstract class Mediator
 {
-    abstract class Mediator
-    {
-        public abstract void Send(string message, Colleague colleague);
-    }
+    public abstract void Send(string message, Colleague colleague);
 }

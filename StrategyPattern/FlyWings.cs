@@ -1,12 +1,9 @@
-﻿using System;
+﻿namespace Ducks;
 
-namespace Ducks
+class FlyWings : IFlyBehaviour
 {
-    class FlyWings : IFlyBehaviour
+    public void Fly()
     {
-        public void Fly()
-        {
-            Console.WriteLine("Flap Flap");
-        }
+        Console.WriteLine("Flap Flap");
     }
 }

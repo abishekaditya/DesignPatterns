@@ -1,30 +1,29 @@
-﻿namespace DecoratorPattern
+﻿namespace DecoratorPattern;
+
+class WhipCondiment : CondimentDecorator
 {
-    class WhipCondiment : CondimentDecorator
+    Beverage _beverage;
+
+    public WhipCondiment(Beverage beverage)
     {
-        Beverage _beverage;
+        this._beverage = beverage;
+    }
 
-        public WhipCondiment(Beverage beverage)
+    public override string Description
+    {
+        get
         {
-            this._beverage = beverage;
-        }
-
-        public override string Description
-        {
-            get
+            if (_beverage.Description.StartsWith("Whip"))
             {
-                if (_beverage.Description.StartsWith("Whip"))
-                {
-                    return "Double " + _beverage.Description;
-                }
-                else
-                    return "Whip " + _beverage.Description;
+                return "Double " + _beverage.Description;
             }
+            else
+                return "Whip " + _beverage.Description;
         }
+    }
 
-        public override double Cost()
-        {
-            return 0.15 + _beverage.Cost();
-        }
+    public override double Cost()
+    {
+        return 0.15 + _beverage.Cost();
     }
 }

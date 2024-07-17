@@ -1,9 +1,8 @@
-﻿namespace DecoratorPattern
+﻿namespace DecoratorPattern;
+
+abstract class Beverage
 {
-    abstract class Beverage
-    {
-        protected string _description = "No Description";
-        public abstract string Description { get; }
-        public abstract double Cost();
-    }
+    protected string _description = "No Description";
+    public abstract string Description { get; }
+    public abstract double Cost();
 }

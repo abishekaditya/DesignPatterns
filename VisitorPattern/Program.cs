@@ -1,22 +1,19 @@
-﻿using System;
+﻿namespace VisitorPattern;
 
-namespace VisitorPattern
+class Program
 {
-    class Program
+    static void Main()
     {
-        static void Main()
-        {
-            var apartment = new Apartment(new LivingRoom(), new Bedroom(), new Bedroom());
-            var studio = new Studio(new LivingRoom(), new Bedroom());
-            Console.WriteLine("Visiting an Apartment");
-            apartment.Accept(new ApartmentVisitor());
-            apartment.Accept(new LivingRoomVisitor());
-            apartment.Accept(new BedroomVisitor());
+        var apartment = new Apartment(new LivingRoom(), new Bedroom(), new Bedroom());
+        var studio = new Studio(new LivingRoom(), new Bedroom());
+        Console.WriteLine("Visiting an Apartment");
+        apartment.Accept(new ApartmentVisitor());
+        apartment.Accept(new LivingRoomVisitor());
+        apartment.Accept(new BedroomVisitor());
 
-            Console.WriteLine("Visiting a Studio");
-            studio.Accept(new StudioVisitor());
-            studio.Accept(new LivingRoomVisitor());
-            studio.Accept(new BedroomVisitor());
-        }
+        Console.WriteLine("Visiting a Studio");
+        studio.Accept(new StudioVisitor());
+        studio.Accept(new LivingRoomVisitor());
+        studio.Accept(new BedroomVisitor());
     }
 }

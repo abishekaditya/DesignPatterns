@@ -1,43 +1,40 @@
-﻿using System;
+﻿namespace StatePattern;
 
-namespace StatePattern
+public class SoldState : IState
 {
-    public class SoldState : IState
+    private GumballMachine Machine { get; }
+
+    public SoldState(GumballMachine gumballMachine)
     {
-        private GumballMachine Machine { get; }
+        Machine = gumballMachine;
+    }
 
-        public SoldState(GumballMachine gumballMachine)
+    public void InsertQuarter()
+    {
+        Console.WriteLine("Please wait, already in progress");
+    }
+
+    public void EjectQuarter()
+    {
+        Console.WriteLine("Can't eject, already turned the crank");
+    }
+
+    public void TurnCrank()
+    {
+        Console.WriteLine("Turning twice achieves nothing");
+    }
+
+    public void Dispense()
+    {
+        Machine.ReleaseBall();
+        if (Machine.Count > 0)
         {
-            Machine = gumballMachine;
+            Machine.State = Machine.NoQuarterState;
         }
-
-        public void InsertQuarter()
+        else
         {
-            Console.WriteLine("Please wait, already in progress");
-        }
-
-        public void EjectQuarter()
-        {
-            Console.WriteLine("Can't eject, already turned the crank");
-        }
-
-        public void TurnCrank()
-        {
-            Console.WriteLine("Turning twice achieves nothing");
-        }
-
-        public void Dispense()
-        {
-            Machine.ReleaseBall();
-            if (Machine.Count > 0)
-            {
-                Machine.State = Machine.NoQuarterState;
-            }
-            else
-            {
-                Console.WriteLine("Oops! No more gumballs");
-                Machine.State = Machine.SoldOutState;
-            }
+            Console.WriteLine("Oops! No more gumballs");
+            Machine.State = Machine.SoldOutState;
         }
     }
 }

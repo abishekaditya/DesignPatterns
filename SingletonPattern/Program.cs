@@ -1,22 +1,19 @@
-﻿using System;
+﻿namespace SingletonPattern;
 
-namespace SingletonPattern
+static class Program
 {
-    static class Program
+    static void Main()
     {
-        static void Main()
+        try
         {
-            try
-            {
-                var chocoEggs = ChocolateBoiler.GetInstance();
-                chocoEggs.Fill();
-                chocoEggs.Boil();
-                chocoEggs.Drain();
-            }
-            catch (Exception)
-            {
-                Console.Write("Oops");
-            }
+            var chocoEggs = ChocolateBoiler.GetInstance();
+            chocoEggs.Fill();
+            chocoEggs.Boil();
+            chocoEggs.Drain();
+        }
+        catch (Exception)
+        {
+            Console.Write("Oops");
         }
     }
 }

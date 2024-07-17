@@ -1,8 +1,7 @@
-﻿namespace CommandPattern
+﻿namespace CommandPattern;
+
+internal struct OnOffStruct
 {
-    internal struct OnOffStruct
-    {
-        public ICommand On;
-        public ICommand Off;
-    }
+    public ICommand On;
+    public ICommand Off;
 }

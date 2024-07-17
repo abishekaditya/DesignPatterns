@@ -1,3 +1,3 @@
 ﻿using System.Runtime.CompilerServices;
 
-[assembly:InternalsVisibleTo("SingletonPattern.Tests")]
+[assembly: InternalsVisibleTo("SingletonPattern.Tests")]

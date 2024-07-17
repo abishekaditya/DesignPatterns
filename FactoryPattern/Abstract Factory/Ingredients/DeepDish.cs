@@ -1,7 +1,6 @@
-﻿namespace FactoryPattern
+﻿namespace FactoryPattern;
+
+internal class DeepDish : IDough
 {
-    internal class DeepDish : IDough
-    {
-        public string Name => "Deep Dish";
-    }
+    public string Name => "Deep Dish";
 }

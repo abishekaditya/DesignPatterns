@@ -1,7 +1,6 @@
-﻿namespace FactoryPattern
+﻿namespace FactoryPattern;
+
+public interface ICheese
 {
-    public interface ICheese
-    {
-        string Name { get; }
-    }
+    string Name { get; }
 }

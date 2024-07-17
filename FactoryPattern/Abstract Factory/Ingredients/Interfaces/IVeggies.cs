@@ -1,7 +1,6 @@
-﻿namespace FactoryPattern
+﻿namespace FactoryPattern;
+
+public interface IVeggies
 {
-    public interface IVeggies
-    {
-        string Name { get; }
-    }
+    string Name { get; }
 }

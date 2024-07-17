@@ -1,11 +1,10 @@
-﻿namespace FactoryPattern
-{
-    internal class Onion : IVeggies
-    {
-        public Onion()
-        {
-        }
+﻿namespace FactoryPattern;
 
-        public string Name => "Onions";
+internal class Onion : IVeggies
+{
+    public Onion()
+    {
     }
+
+    public string Name => "Onions";
 }

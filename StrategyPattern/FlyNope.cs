@@ -1,12 +1,9 @@
-﻿using System;
+﻿namespace Ducks;
 
-namespace Ducks
+class FlyNope : IFlyBehaviour
 {
-    class FlyNope : IFlyBehaviour
+    public void Fly()
     {
-        public void Fly()
-        {
-            Console.WriteLine("I can't fly");
-        }
+        Console.WriteLine("I can't fly");
     }
 }

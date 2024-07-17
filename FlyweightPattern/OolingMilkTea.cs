@@ -1,18 +1,15 @@
-using System;
+namespace FlyweightPattern;
 
-namespace FlyweightPattern
+public class OolingMilkTea : IBeverage
 {
-    public class OolingMilkTea : IBeverage
+
+    public OolingMilkTea()
     {
+        Console.WriteLine("Initializing an Oolong Milk Tea instance");
+    }
 
-        public OolingMilkTea()
-        {
-            Console.WriteLine("Initializing an Oolong Milk Tea instance");
-        }
-
-        public void Drink()
-        {
-            Console.WriteLine("hmmm... this is oolong milk tea");
-        }
+    public void Drink()
+    {
+        Console.WriteLine("hmmm... this is oolong milk tea");
     }
 }

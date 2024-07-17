@@ -1,44 +1,42 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 
-namespace IteratorPattern
+namespace IteratorPattern;
+
+public class DinnerMenu
 {
-    public class DinnerMenu
+    private const int Max = 1;
+
+    private int _count;
+    private Menu[] _items;
+
+    public IEnumerable Items
     {
-        private const int Max = 1;
-
-        private int _count;
-        private Menu[] _items;
-
-        public IEnumerable Items
+        get
         {
-            get
-            {
-                return new DinnerMenuIterator(_items);
-            }
+            return new DinnerMenuIterator(_items);
         }
+    }
 
-        public DinnerMenu()
+    public DinnerMenu()
+    {
+        _items = new Menu[Max];
+
+        AddItems("Hamburger", "Hamburger with cheese and onions", 160, false);
+
+    }
+
+    private void AddItems(string name, string description, int price, bool veg)
+    {
+        var item = new Menu(name, description, price, veg);
+
+        if (_count <= Max)
         {
-            _items = new Menu[Max];
-
-            AddItems("Hamburger", "Hamburger with cheese and onions", 160, false);
-
+            _items[_count] = item;
+            _count++;
         }
-
-        private void AddItems(string name, string description, int price, bool veg)
+        else
         {
-            var item = new Menu(name, description, price, veg);
-
-            if (_count <= Max)
-            {
-                _items[_count] = item;
-                _count++;
-            }
-            else
-            {
-                throw new IndexOutOfRangeException();
-            }
+            throw new IndexOutOfRangeException();
         }
     }
 }

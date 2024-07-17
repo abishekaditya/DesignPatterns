@@ -1,10 +1,9 @@
-﻿namespace SingletonPattern
+﻿namespace SingletonPattern;
+
+internal partial class ChocolateBoiler
 {
-    internal partial class ChocolateBoiler
+    private enum Status
     {
-        private enum Status
-        {
-            Empty, InProgress, Boiled
-        }
+        Empty, InProgress, Boiled
     }
 }

@@ -1,22 +1,19 @@
-using System;
+namespace BridgePattern;
 
-namespace BridgePattern
+public class FlyingEnchantment : IEnchantment
 {
-    public class FlyingEnchantment : IEnchantment
+    public void OnActivate()
     {
-        public void OnActivate()
-        {
-            Console.WriteLine("The item begins to glow faintly.");
-        }
+        Console.WriteLine("The item begins to glow faintly.");
+    }
 
-        public void Apply()
-        {
-            Console.WriteLine("The item flies and strikes the enemies finally returning to owner's hand.");
-        }
+    public void Apply()
+    {
+        Console.WriteLine("The item flies and strikes the enemies finally returning to owner's hand.");
+    }
 
-        public void OnDeactivate()
-        {
-            Console.WriteLine("The item's glow fades.");
-        }
+    public void OnDeactivate()
+    {
+        Console.WriteLine("The item's glow fades.");
     }
 }

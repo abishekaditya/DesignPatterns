@@ -1,30 +1,29 @@
-﻿namespace DecoratorPattern
+﻿namespace DecoratorPattern;
+
+class MochaCondiment : CondimentDecorator
 {
-    class MochaCondiment : CondimentDecorator
+    Beverage _beverage;
+
+    public MochaCondiment(Beverage beverage)
     {
-        Beverage _beverage;
+        this._beverage = beverage;
+    }
 
-        public MochaCondiment(Beverage beverage)
+    public override string Description
+    {
+        get
         {
-            this._beverage = beverage;
-        }
-
-        public override string Description
-        {
-            get
+            if (_beverage.Description.StartsWith("Mocha"))
             {
-                if (_beverage.Description.StartsWith("Mocha"))
-                {
-                    return "Double " + _beverage.Description;
-                }
-                else
-                    return "Mocha " + _beverage.Description;
+                return "Double " + _beverage.Description;
             }
+            else
+                return "Mocha " + _beverage.Description;
         }
+    }
 
-        public override double Cost()
-        {
-            return 0.2 + _beverage.Cost();
-        }
+    public override double Cost()
+    {
+        return 0.2 + _beverage.Cost();
     }
 }

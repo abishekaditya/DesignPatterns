@@ -1,20 +1,19 @@
 ﻿
-namespace AdapterPattern
+namespace AdapterPattern;
+
+internal static class Program
 {
-    internal static class Program
+    private static void Main()
     {
-        private static void Main()
-        {
-            var turkey = new WildTurkey();
-            var adapter = new TurkeyAdapter(turkey);
+        var turkey = new WildTurkey();
+        var adapter = new TurkeyAdapter(turkey);
 
-            Tester(adapter);
-        }
+        Tester(adapter);
+    }
 
-        private static void Tester(IDuck duck)
-        {
-            duck.Fly();
-            duck.Quack();
-        }
+    private static void Tester(IDuck duck)
+    {
+        duck.Fly();
+        duck.Quack();
     }
 }

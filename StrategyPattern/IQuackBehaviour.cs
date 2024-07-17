@@ -1,7 +1,6 @@
-﻿namespace Ducks
+﻿namespace Ducks;
+
+internal interface IQuackBehaviour
 {
-    internal interface IQuackBehaviour
-    {
-        void Quack();
-    }
+    void Quack();
 }

@@ -1,7 +1,6 @@
-﻿namespace FactoryPattern
+﻿namespace FactoryPattern;
+
+internal class ThinCrust : IDough
 {
-    internal class ThinCrust : IDough
-    {
-        public string Name => "Thin Crust";
-    }
+    public string Name => "Thin Crust";
 }

@@ -1,17 +1,16 @@
-﻿namespace DecoratorPattern
+﻿namespace DecoratorPattern;
+
+internal class DarkRoast : Beverage
 {
-    internal class DarkRoast : Beverage
+    public DarkRoast()
     {
-        public DarkRoast()
-        {
-            _description = "Dark Roast";
-        }
+        _description = "Dark Roast";
+    }
 
-        public override string Description => _description;
+    public override string Description => _description;
 
-        public override double Cost()
-        {
-            return 1.49;
-        }
+    public override double Cost()
+    {
+        return 1.49;
     }
 }

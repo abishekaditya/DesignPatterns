@@ -1,19 +1,16 @@
-﻿using System;
+﻿namespace ProxyPattern;
 
-namespace ProxyPattern
+class Program
 {
-    class Program
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-            Image image = new ProxyImage("testImage.jpg");
+        Image image = new ProxyImage("testImage.jpg");
 
-            //image will be loaded from disk
-            image.display();
-            Console.WriteLine("");
+        //image will be loaded from disk
+        image.display();
+        Console.WriteLine("");
 
-            //image will not be loaded from disk
-            image.display();
-        }
+        //image will not be loaded from disk
+        image.display();
     }
 }

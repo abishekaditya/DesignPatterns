@@ -1,48 +1,46 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 
-namespace IteratorPattern
+namespace IteratorPattern;
+
+public class BreakfastMenuEnum : IEnumerator
 {
-    public class BreakfastMenuEnum : IEnumerator
+    private readonly ArrayList _items;
+    private int _position = -1;
+
+    public BreakfastMenuEnum(ArrayList items)
     {
-        private readonly ArrayList _items;
-        private int _position = -1;
+        _items = items;
+    }
 
-        public BreakfastMenuEnum(ArrayList items)
+    public void Dispose()
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public bool MoveNext()
+    {
+        _position++;
+        return (_position < _items.Count);
+    }
+
+    public void Reset()
+    {
+        _position = -1;
+    }
+
+    object IEnumerator.Current => Current;
+
+    public Menu Current
+    {
+        get
         {
-            _items = items;
-        }
-
-        public void Dispose()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public bool MoveNext()
-        {
-            _position++;
-            return (_position < _items.Count);
-        }
-
-        public void Reset()
-        {
-            _position = -1;
-        }
-
-        object IEnumerator.Current => Current;
-
-        public Menu Current
-        {
-            get
+            try
             {
-                try
-                {
-                    return (Menu)_items[_position];
-                }
-                catch (IndexOutOfRangeException)
-                {
-                    throw new InvalidOperationException();
-                }
+                return (Menu)_items[_position];
+            }
+            catch (IndexOutOfRangeException)
+            {
+                throw new InvalidOperationException();
             }
         }
     }

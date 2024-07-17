@@ -1,20 +1,17 @@
-﻿using System;
+﻿namespace BuilderPattern;
 
-namespace BuilderPattern
+class Program
 {
-    class Program
+    static void Main()
     {
-        static void Main()
-        {
-            var builder = new MyHamburgerBuilder();
-            var cook = new Cook(builder);
-            var myHamburger = cook.Build();
+        var builder = new MyHamburgerBuilder();
+        var cook = new Cook(builder);
+        var myHamburger = cook.Build();
 
-            cook.ChangeBuilder(new WifesHamburgerBuilder());
-            var wifesHamburger = cook.Build();
+        cook.ChangeBuilder(new WifesHamburgerBuilder());
+        var wifesHamburger = cook.Build();
 
-            Console.WriteLine($"My Hamburger: {myHamburger}");
-            Console.WriteLine($"My Wife's Hamburger: {wifesHamburger}");
-        }
+        Console.WriteLine($"My Hamburger: {myHamburger}");
+        Console.WriteLine($"My Wife's Hamburger: {wifesHamburger}");
     }
 }

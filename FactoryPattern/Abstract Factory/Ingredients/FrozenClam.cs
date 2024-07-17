@@ -1,7 +1,6 @@
-﻿namespace FactoryPattern
+﻿namespace FactoryPattern;
+
+internal class FrozenClam : IClam
 {
-    internal class FrozenClam : IClam
-    {
-        public string Name => "Frozen Clam";
-    }
+    public string Name => "Frozen Clam";
 }

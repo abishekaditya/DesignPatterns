@@ -1,23 +1,22 @@
-﻿namespace ProxyPattern
+﻿namespace ProxyPattern;
+
+public class ProxyImage : Image
 {
-    public class ProxyImage : Image
+    private RealImage _realImage;
+    private string _fileName;
+
+    public ProxyImage(string fileName)
     {
-        private RealImage _realImage;
-        private string _fileName;
+        _fileName = fileName;
+    }
 
-        public ProxyImage(string fileName)
+
+    public void display()
+    {
+        if (_realImage == null)
         {
-            _fileName = fileName;
+            _realImage = new RealImage(_fileName);
         }
-
-
-        public void display()
-        {
-            if (_realImage == null)
-            {
-                _realImage = new RealImage(_fileName);
-            }
-            _realImage.display();
-        }
+        _realImage.display();
     }
 }

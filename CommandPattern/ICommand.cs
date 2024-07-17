@@ -1,8 +1,7 @@
-﻿namespace CommandPattern
+﻿namespace CommandPattern;
+
+internal interface ICommand
 {
-    internal interface ICommand
-    {
-        void Execute();
-        void Undo();
-    }
+    void Execute();
+    void Undo();
 }

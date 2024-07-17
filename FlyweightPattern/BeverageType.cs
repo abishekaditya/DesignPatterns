@@ -1,7 +1,6 @@
-namespace FlyweightPattern
+namespace FlyweightPattern;
+
+public enum BeverageType
 {
-    public enum BeverageType
-    {
-        BubbleMilk, FoamMilk, OolongMilk, CoconutMilk
-    }
+    BubbleMilk, FoamMilk, OolongMilk, CoconutMilk
 }

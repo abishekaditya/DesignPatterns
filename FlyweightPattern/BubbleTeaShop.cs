@@ -1,37 +1,33 @@
-using System;
-using System.Collections.Generic;
+namespace FlyweightPattern;
 
-namespace FlyweightPattern
+public class BubbleTeaShop
 {
-    public class BubbleTeaShop
+    private List<IBeverage> takeAwayOrders;
+
+    public BubbleTeaShop()
     {
-        private List<IBeverage> takeAwayOrders;
+        takeAwayOrders = new List<IBeverage>();
+        TakeOrders();
+    }
 
-        public BubbleTeaShop()
+    private void TakeOrders()
+    {
+        var factory = new BeverageFlyweightFactory();
+
+        takeAwayOrders.Add(factory.MakeBeverage(BeverageType.BubbleMilk));
+        takeAwayOrders.Add(factory.MakeBeverage(BeverageType.BubbleMilk));
+        takeAwayOrders.Add(factory.MakeBeverage(BeverageType.CoconutMilk));
+        takeAwayOrders.Add(factory.MakeBeverage(BeverageType.FoamMilk));
+        takeAwayOrders.Add(factory.MakeBeverage(BeverageType.OolongMilk));
+        takeAwayOrders.Add(factory.MakeBeverage(BeverageType.OolongMilk));
+    }
+
+    public void Enumerate()
+    {
+        Console.WriteLine("Enumerating take away orders\n");
+        foreach (var beverage in takeAwayOrders)
         {
-            takeAwayOrders = new List<IBeverage>();
-            TakeOrders();
-        }
-
-        private void TakeOrders()
-        {
-            var factory = new BeverageFlyweightFactory();
-
-            takeAwayOrders.Add(factory.MakeBeverage(BeverageType.BubbleMilk));
-            takeAwayOrders.Add(factory.MakeBeverage(BeverageType.BubbleMilk));
-            takeAwayOrders.Add(factory.MakeBeverage(BeverageType.CoconutMilk));
-            takeAwayOrders.Add(factory.MakeBeverage(BeverageType.FoamMilk));
-            takeAwayOrders.Add(factory.MakeBeverage(BeverageType.OolongMilk));
-            takeAwayOrders.Add(factory.MakeBeverage(BeverageType.OolongMilk));
-        }
-
-        public void Enumerate()
-        {
-            Console.WriteLine("Enumerating take away orders\n");
-            foreach (var beverage in takeAwayOrders)
-            {
-                beverage.Drink();
-            }
+            beverage.Drink();
         }
     }
 }

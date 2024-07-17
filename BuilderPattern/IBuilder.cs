@@ -1,11 +1,10 @@
-﻿namespace BuilderPattern
+﻿namespace BuilderPattern;
+
+public interface IBuilder
 {
-    public interface IBuilder
-    {
-        void AddIngredients();
-        void AddShape();
-        void AddSize();
-        void Reset();
-        Hamburger Build();
-    }
+    void AddIngredients();
+    void AddShape();
+    void AddSize();
+    void Reset();
+    Hamburger Build();
 }
